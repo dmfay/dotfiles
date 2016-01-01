@@ -1,0 +1,16 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.zshrc: zshrc
+    ~/.gitconfig: gitconfig
+    ~/.Xresources: Xresources
+    ~/.xinitrc: xinitrc
+    ~/.config/clipit: clipit/
+    ~/.config/fontconfig: fontconfig/
+    ~/.config/i3: i3/
+    ~/.config/i3status: i3status/
+    ~/.volumeicon: volumeicon/
+    ~/.zsh: zsh/
