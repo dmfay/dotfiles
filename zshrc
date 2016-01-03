@@ -29,5 +29,6 @@ RPS1='$(git_prompt_string)'
 PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m %{$fg_no_bold[cyan]%}%1~ %{$reset_color%}%# "
 #RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
-alias ls='pwd; ls --color'
+alias grep='grep --color'
+alias ls='ls --color'
 alias vi='vim'

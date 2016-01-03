@@ -4,6 +4,9 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
+    ~/.i3blocks: i3blocks/
+    ~/.i3blocks.conf: i3blocks.conf
+    ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.Xresources: Xresources
@@ -11,6 +14,6 @@
     ~/.config/clipit: clipit/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
-    ~/.config/i3status: i3status/
+#    ~/.config/i3status: i3status/
     ~/.volumeicon: volumeicon/
     ~/.zsh: zsh/
