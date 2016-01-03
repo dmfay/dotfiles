@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "i3blocks"]
+	path = i3blocks
+	url = https://github.com/Anachron/i3blocks.git
