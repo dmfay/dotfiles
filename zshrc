@@ -32,3 +32,4 @@ PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m %{$fg_no_bold[cyan]%}%
 alias grep='grep --color'
 alias ls='ls --color'
 alias vi='vim'
+alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
