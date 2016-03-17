@@ -2,6 +2,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - mkdir -p ~/.config
 
 - link:
     ~/.i3blocks: i3blocks/blocks/
