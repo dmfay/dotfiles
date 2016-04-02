@@ -1,0 +1,40 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1036,
+       "width": 1148,
+       "x": 2,
+       "y": 42
+    },
+    "name": "config — /home/dian/.dotfiles — Atom",
+    "percent": 0.6,
+    "swallows": [
+       {
+        "class": "^Atom$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 364,
+       "width": 644,
+       "x": 0,
+       "y": 0
+    },
+    "name": "urxvt",
+    "percent": 0.4,
+    "swallows": [
+       {
+        "class": "^URxvt$"
+       }
+    ],
+    "type": "con"
+}

@@ -181,12 +181,15 @@ bar {
     status_command i3blocks
 }
 
+assign [class="^Atom$"]     1
+assign [class="^Chromium$"] 2
+assign [class="^Keepassx2$"] 3
+assign [class="^Nylas\\ N1$"] 3
+assign [class="^Pidgin$"]   3
+assign [class="^Steam$"]    4
+
 exec --no-startup-id redshift || redshift -l 42.3:-83.0
 exec --no-startup-id clipit
+exec --no-startup-id compton
 
-assign [class="KeePassX"] 1
-assign [class="Atom"]     1
-assign [class="Chromium"] 2
-assign [class="Sylpheed"] 3
-assign [class="Pidgin"]   3
-assign [class="Steam"]    4
+exec ~/.config/i3/restore.sh &

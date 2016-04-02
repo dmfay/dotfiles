@@ -33,3 +33,6 @@ alias grep='grep --color'
 alias ls='ls --color'
 alias vi='vim'
 alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
+
+# the fuck
+eval $(thefuck --alias)
