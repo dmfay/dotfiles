@@ -1,3 +1,5 @@
+# http://pawelgoscicki.com/archives/2012/09/vi-mode-indicator-in-zsh-prompt/
+
 vim_ins_mode="%{$fg[green]%}[INS]%{$reset_color%}"
 vim_cmd_mode="%{$fg[red]%}[CMD]%{$reset_color%}"
 vim_mode=$vim_ins_mode
