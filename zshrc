@@ -13,6 +13,8 @@ setopt HIST_REDUCE_BLANKS
 setopt NO_FLOW_CONTROL
 # stay frosty out there
 setopt RM_STAR_WAIT
+# don't display RPROMPT for previously accepted lines; only display it next to current line
+setopt transient_rprompt
 
 zstyle :compinstall filename '/home/dian/.zshrc'
 
@@ -22,12 +24,12 @@ colors
 
 # sources
 source ~/.zsh/git.zsh
+source ~/.zsh/mode.zsh
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m %{$fg_no_bold[cyan]%}%1~ %{$reset_color%}%# "
-#RPROMPT="[%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
+PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
 
 alias grep='grep --color'
 alias ls='ls --color'
