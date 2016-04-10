@@ -153,6 +153,8 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
+bindsym $mod+x [urgent=latest] focus
+
 bindsym $mod+r mode "resize"
 
 # screenshot
