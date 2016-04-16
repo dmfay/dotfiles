@@ -1,6 +1,7 @@
 ! urxvt
 
-URxvt*font:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
+URxvt*font:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight,\
+  xft:Symbola:pixelsize=10
 URxvt*boldFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
 URxvt*italicFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
 URxvt*boldItalicFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
