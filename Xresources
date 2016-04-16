@@ -1,9 +1,10 @@
 ! urxvt
 
-!URxvt*font:xft:Cousine:style=Regular:pixelsize=12:antialias=true:hinting=slight
-!URxvt*boldFont:xft:Cousine:style=Regular:pixelsize=12:antialias=true:hinting=slight
-URxvt*font:xft:Inconsolata:style=Medium:pixelsize=14:antialias=true:hinting=slight
-URxvt*boldFont:xft:Inconsolata:style=Medium:pixelsize=14j:antialias=true:hinting=slight
+URxvt*font:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
+URxvt*boldFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
+URxvt*italicFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
+URxvt*boldItalicFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
+URxvt*imFont:xft:Inconsolata\\-dz:style=dz:pixelsize=12:antialias=true:hinting=slight
 URxvt*borderless: 1
 URxvt*scrollBar:            false
 URxvt*saveLines:  2000
