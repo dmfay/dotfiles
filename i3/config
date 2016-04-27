@@ -186,7 +186,7 @@ bar {
 }
 
 assign [class="^Atom$"]     1
-assign [class="^Chromium$"] 2
+assign [class="^Vivaldi$"] 2
 assign [class="^Keepassx2$"] 3
 assign [class="^Nylas\\ N1$"] 3
 assign [class="^Pidgin$"]   3

@@ -6,7 +6,7 @@ done
 
 (atom &)
 (urxvt &)
-(chromium &)
+(vivaldi-stable &)
 (keepassx2 &)
 (nylas &)
 (pidgin &)

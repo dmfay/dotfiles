@@ -9,11 +9,11 @@
        "x": 2,
        "y": 42
     },
-    "name": "i3: Layout saving in i3 - Chromium",
+    "name": "i3: Layout saving in i3 - Vivaldi",
     "percent": 1,
     "swallows": [
        {
-        "class": "^chromium$"
+        "class": "^vivaldi-stable$"
        }
     ],
     "type": "con"
