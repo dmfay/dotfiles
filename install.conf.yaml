@@ -3,6 +3,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/.config
+    - mkdir -p ~/.vifm
 
 - link:
     ~/.i3blocks: i3blocks/blocks/
@@ -15,4 +16,5 @@
     ~/.config/clipit: clipit/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
+    ~/.vifm/vifmrc: vifmrc
     ~/.zsh: zsh/
