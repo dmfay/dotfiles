@@ -29,12 +29,30 @@ source ~/.zsh/mode.zsh
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
+PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
 
 alias grep='grep --color'
 alias ls='ls --color'
 alias vi='vim'
 alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
 
+# per http://linux-sxs.org/housekeeping/lscolors.html :
+# di = directory
+# fi = file
+# ln = symbolic link
+# pi = fifo file
+# so = socket file
+# bd = block (buffered) special file
+# cd = character (unbuffered) special file
+# or = symbolic link pointing to a non-existent file (orphan)
+# mi = non-existent file pointed to by a symbolic link (visible when you type ls -l)
+# ex = file which is executable (ie. has 'x' set in permissions).
+# *.ext = all files of type
+LS_COLORS='di=9:fi=8:ln=31:pi=13:so=13:bd=13:cd=13:or=31:mi=8:ex=35'
+export LS_COLORS
+
 # the fuck
 eval $(thefuck --alias)
+
+# pop a calendar
+when cw

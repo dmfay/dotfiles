@@ -28,38 +28,39 @@ URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.iso14755: false
 URxvt.iso14755_52: false
 
-!! urxvt color scheme:
-URxvt*background: #1a1b25
-URxvt*foreground: #e0e0e0
+! special
+*.foreground:   #f0e2ec
+*.background:   #16161f
+*.cursorColor:  #552a48
 
 ! black
-*color0:       #1a1b25
-*color8:       #565072
+*.color0:       #44405b
+*.color8:       #1d1d29
 
 ! red
-*color1:       #f01134
-*color9:       #f46a86
+*.color1:       #773b65
+*.color9:       #552a48
 
 ! green
-*color2:       #2bf70d
-*color10:      #77ff64
+*.color2:       #90e574
+*.color10:      #1e2a17
 
 ! yellow
-*color3:       #f6df07
-*color11:      #fbf77d
+*.color3:       #f8d48a
+*.color11:      #a894a0
 
 ! blue
-*color4:       #425dfa
-*color12:      #8e9ef9
+*.color4:       #89a1e2
+*.color12:      #3b0d14
 
 ! magenta
-*color5:       #a93bf7
-*color13:      #c47cf7
+*.color5:       #e5a8ee
+*.color13:      #9065b7
 
 ! cyan
-*color6:       #15e4f9
-*color14:      #6deefb
+*.color6:       #97d3dc
+*.color14:      #271425
 
 ! white
-*color7:       #a0a0a0
-*color15:      #e0e0e0
+*.color7:       #f0e2ec
+*.color15:      #16161f

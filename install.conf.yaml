@@ -16,5 +16,7 @@
     ~/.config/clipit: clipit/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
+    ~/.vim: vim
+    ~/.vimrc: vimrc
     ~/.vifm/vifmrc: vifmrc
     ~/.zsh: zsh/

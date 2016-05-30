@@ -16,14 +16,18 @@ set $mod Mod4
 font xft:Inconsolata\-dz, FontAwesome 12
 
 for_window [class=".*"] title_format "<b>%title</b>"
+for_window [class="^.*"] border pixel 1
+
+bindsym $mod+o border normal 1
+bindsym $mod+i border pixel 1
 
 # define colors
 
-set $base   #1a1b25
-set $text   #e0e0e0
+set $base   #16161f
+set $text   #f0e2ec
 set $dtxt   #888888
-set $main   #565072
-set $dark   #2a263f
+set $main   #552a48
+set $dark   #271425
 set $visi   #600D30
 
 #                       border  backgr  text    indic
@@ -173,7 +177,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 bar {
     colors {
-        background  $base
+        background  $dark
         statusline  $text
         focused_workspace   $main $dark $text
         active_workspace    $main $dark $text
