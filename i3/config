@@ -36,7 +36,7 @@ client.focused_inactive $base   $dark   $dtxt   $visi
 client.unfocused        $base   $base   $dtxt   $visi
 client.urgent           $base   $visi   $text   $main
 client.placeholder      $base   $dark   $text   $visi
-client.background       $base
+client.background       $dark
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
