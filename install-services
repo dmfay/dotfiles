@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $EUID -ne 0 ]]; then
+  echo "this script requires sudo" 1>&2
+  exit 1
+fi
+
+cp services/system/* /usr/lib/systemd/system
+cp services/bin/* /usr/local/bin
+
+for f in services/system/*.timer; do
+  timer=`basename "$f"`
+
+  echo "enabling $timer"
+
+  systemctl start "$timer"
+  systemctl enable "$timer"
+done
+
+systemctl daemon-reload
+
+exit 0

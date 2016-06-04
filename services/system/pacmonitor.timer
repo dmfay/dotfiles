@@ -1,0 +1,10 @@
+[Unit]
+Description=Update pacman db hourly
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1h
+Unit=pacmonitor.service
+
+[Install]
+WantedBy=multi-user.target
