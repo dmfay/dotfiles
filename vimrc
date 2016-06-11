@@ -50,6 +50,7 @@ let g:gitgutter_realtime = 1
 set autoindent
 set autoread
 set background=dark
+set backspace=2
 set foldcolumn=1
 set ignorecase
 set number
@@ -71,7 +72,7 @@ set updatetime=250
 colorscheme caput-mortuum
 
 " commands
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
 
 " functions
 " delete trailing whitespace
@@ -87,3 +88,26 @@ filetype plugin indent on
 
 " mappings
 nnoremap <F4> :GundoToggle<CR>
+
+" split window
+nmap <leader>swh :topleft  vnew<CR>
+nmap <leader>swl :botright vnew<CR>
+nmap <leader>swk :topleft  new<CR>
+nmap <leader>swj :botright new<CR>
+
+" split buffe
+nmap <leader>sh  :leftabove  vnew<CR>
+nmap <leader>sl  :rightbelow vnew<CR>
+nmap <leader>sk  :leftabove  new<CR>
+nmap <leader>sj  :rightbelow new<CR>
+
+inoremap {<CR> {<CR>}<Esc>ko<Tab>
+inoremap ( ()<Esc>i
+inoremap " ""<Esc>i
+inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
+" watch for changes
+augroup myvimrc
+  au!
+  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
