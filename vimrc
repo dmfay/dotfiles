@@ -73,6 +73,9 @@ colorscheme caput-mortuum
 
 " commands
 command! W w !sudo tee % > /dev/null
+command! C w !xsel -i -b
+command! CC %w !xsel -i -b
+command! P r !xsel -o -b
 
 " functions
 " delete trailing whitespace
@@ -95,7 +98,7 @@ nmap <leader>swl :botright vnew<CR>
 nmap <leader>swk :topleft  new<CR>
 nmap <leader>swj :botright new<CR>
 
-" split buffe
+" split buffer
 nmap <leader>sh  :leftabove  vnew<CR>
 nmap <leader>sl  :rightbelow vnew<CR>
 nmap <leader>sk  :leftabove  new<CR>

@@ -29,11 +29,11 @@
        "x": 640,
        "y": 342
     },
-    "name": "Nylas N1",
+    "name": "Sylpheed",
     "percent": 0.65,
     "swallows": [
        {
-        "class": "^Nylas\\ N1$"
+        "class": "Sylpheed"
        }
     ],
     "type": "con"

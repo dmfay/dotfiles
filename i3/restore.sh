@@ -8,6 +8,6 @@ done
 (urxvt &)
 (vivaldi-stable &)
 (keepassx2 &)
-(nylas &)
+(sylpheed &)
 (pidgin &)
 (steam &)

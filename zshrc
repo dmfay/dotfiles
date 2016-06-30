@@ -26,13 +26,16 @@ colors
 source ~/.zsh/git.zsh
 source ~/.zsh/mode.zsh
 
+# vars
+export PATH=$PATH:/home/dian/.gem/ruby/2.3.0/bin
+
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
 PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
 
 alias grep='grep --color'
-alias ls='ls --color'
+alias ls='ls -h --color'
 alias vi='vim'
 alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
 
