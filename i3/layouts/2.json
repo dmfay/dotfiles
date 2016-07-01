@@ -5,15 +5,55 @@
     "floating": "auto_off",
     "geometry": {
        "height": 1036,
-       "width": 1916,
-       "x": 2,
+       "width": 617,
+       "x": 0,
        "y": 42
     },
-    "name": "i3: Layout saving in i3 - Vivaldi",
-    "percent": 1,
+    "name": "passwords.kdbx - KeePassX",
+    "percent": 0.233333333333333,
     "swallows": [
        {
-        "class": "^vivaldi-stable$"
+        "class": "^Keepassx2$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 396,
+       "width": 640,
+       "x": 640,
+       "y": 342
+    },
+    "name": "Sylpheed",
+    "percent": 0.65,
+    "swallows": [
+       {
+        "class": "Sylpheed"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "normal",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1036,
+       "width": 217,
+       "x": 1699,
+       "y": 42
+    },
+    "name": "Buddy List",
+    "percent": 0.116666666666667,
+    "swallows": [
+       {
+        "class": "^Pidgin$"
        }
     ],
     "type": "con"
