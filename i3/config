@@ -189,12 +189,11 @@ bar {
     status_command i3blocks
 }
 
-assign [class="^Atom$"]     1
-assign [class="^Vivaldi$"] 2
-assign [class="^Keepassx2$"] 3
-assign [class="Sylpheed"] 3
-assign [class="^Pidgin$"]   3
-assign [class="^Steam$"]    4
+assign [class="^Vivaldi$"] 1
+assign [class="^Keepassx2$"] 2
+assign [class="Sylpheed"] 2
+assign [class="^Pidgin$"]   2
+assign [class="^Steam$"]    3
 
 exec --no-startup-id redshift || redshift -l 42.3:-83.0
 exec --no-startup-id clipit
