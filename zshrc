@@ -36,7 +36,9 @@ PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[red]%}%m%{$rese
 
 alias grep='grep --color'
 alias ls='ls -h --color'
-alias vi='vim'
+alias rm='rm -v'
+alias vi='nvim'
+alias vim='nvim'
 alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
 
 # per http://linux-sxs.org/housekeeping/lscolors.html :
@@ -51,8 +53,8 @@ alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
 # mi = non-existent file pointed to by a symbolic link (visible when you type ls -l)
 # ex = file which is executable (ie. has 'x' set in permissions).
 # *.ext = all files of type
-LS_COLORS='di=9:fi=8:ln=31:pi=13:so=13:bd=13:cd=13:or=31:mi=8:ex=35'
-export LS_COLORS
+#LS_COLORS='di=9:fi=8:ln=31:pi=13:so=13:bd=13:cd=13:or=31:mi=8:ex=35'
+export LS_COLORS=
 
 # color codes from http://www.termsys.demon.co.uk/vtansi.htm#colors
 # 0 Reset all attributes

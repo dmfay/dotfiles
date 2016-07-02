@@ -20,15 +20,13 @@ Plugin 'VundleVim/Vundle.vim'
 " install under a different name to avoid conflicts: Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'tpope/vim-surround'
-Plugin 'gundo'
+Plugin 'simnalamburt/vim-mundo'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ap/vim-css-color'
-Plugin 'godlygeek/csapprox'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'dmfay/vim-csexact'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +43,8 @@ syntax enable
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_max_signs = 500  " default value
 let g:gitgutter_realtime = 1
+
+let g:python_host_prog = '/usr/bin/python2'
 
 " options
 set autoindent
@@ -90,7 +90,7 @@ autocmd BufWrite *.coffee :call DeleteTrailingWS()
 filetype plugin indent on
 
 " mappings
-nnoremap <F4> :GundoToggle<CR>
+nnoremap <F4> :MundoToggle<CR>
 
 " split window
 nmap <leader>swh :topleft  vnew<CR>

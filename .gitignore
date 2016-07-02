@@ -3,3 +3,5 @@
 **/*.netrwhist
 
 vim/bundle
+vim/.vim
+vim/init.vim

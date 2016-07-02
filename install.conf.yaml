@@ -11,11 +11,11 @@
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.Xresources: Xresources
     ~/.xinitrc: xinitrc
     ~/.config/clipit: clipit/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
+    ~/.config/termite: termite/
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.vifm/vifmrc: vifmrc
