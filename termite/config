@@ -1,9 +1,13 @@
+[options]
+cursor_blink = system
+
 [colors]
 
 # special
 foreground      = #f0e2ec
 foreground_bold = #f0e2ec
-cursor          = #f0e2ec
+cursor          = #773b65
+cursor_foreground = #f0e2ec
 background      = #16161f
 
 # black
@@ -37,4 +41,3 @@ color14 = #97d3dc
 # white
 color7  = #f0e2ec
 color15 = #f0e2ec
-
