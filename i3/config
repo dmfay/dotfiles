@@ -28,7 +28,7 @@ set $text   #f0e2ec
 set $dtxt   #888888
 set $main   #552a48
 set $dark   #271425
-set $visi   #600D30
+set $visi   #773b65
 
 #                       border  backgr  text    indic
 client.focused          $base   $main   $text   $visi
