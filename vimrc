@@ -27,6 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,6 +46,12 @@ let g:gitgutter_max_signs = 500  " default value
 let g:gitgutter_realtime = 1
 
 let g:python_host_prog = '/usr/bin/python2'
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 " options
 set autoindent
@@ -68,6 +75,7 @@ set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
 set updatetime=250
 set ruler
+set mousefocus
 
 " colors
 colorscheme caput-mortuum
@@ -166,6 +174,15 @@ nmap <leader>sl  :rightbelow vnew<CR>
 nmap <leader>sk  :leftabove  new<CR>
 nmap <leader>sj  :rightbelow new<CR>
 
+" split navigation
+imap <C-w> <C-o><C-w>
+
+nnoremap <A-h> <C-W>h
+nnoremap <A-j> <C-W>j
+nnoremap <A-k> <C-W>k
+nnoremap <A-l> <C-W>l
+
+" conveniences
 inoremap {<CR> {<CR>}<Esc>ko<Tab>
 inoremap ( ()<Esc>i
 inoremap " ""<Esc>i
