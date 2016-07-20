@@ -4,3 +4,6 @@
 [submodule "i3blocks"]
 	path = i3blocks
 	url = https://github.com/Anachron/i3blocks.git
+[submodule "vim/dein.vim"]
+	path = vim/dein.vim
+	url = https://github.com/Shougo/dein.vim.git

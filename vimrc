@@ -1,42 +1,26 @@
 " plugin management
 
 set nocompatible              " be iMproved, required
-filetype off                  " required
+filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set runtimepath^=~/.vim/dein.vim
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call dein#begin(expand('.vim/plugins'))
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" github: Plugin 'tpope/vim-fugitive'
-" local git: Plugin 'file:///home/gmarik/path/to/plugin'
-" other git: Plugin 'git://git.wincent.com/command-t.git'
-" subdirectory in git repo (pass path to subdir): Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts.org: Plugin 'L9'
-" install under a different name to avoid conflicts: Plugin 'ascenator/L9', {'name': 'newL9'}
+call dein#add('Shougo/dein.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('simnalamburt/vim-mundo')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('pangloss/vim-javascript')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('terryma/vim-multiple-cursors')
+call dein#add('ap/vim-css-color')
+call dein#add('tpope/vim-unimpaired')
+call dein#add('mileszs/ack.vim')
 
-Plugin 'tpope/vim-surround'
-Plugin 'simnalamburt/vim-mundo'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ap/vim-css-color'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'mileszs/ack.vim'
+call dein#end()
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+filetype plugin indent on
 
 " config
 syntax enable
