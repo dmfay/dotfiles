@@ -5,19 +5,18 @@ filetype off
 
 set runtimepath^=~/.vim/dein.vim
 
-call dein#begin(expand('.vim/plugins'))
+call dein#begin(expand('~/.vim/plugins'))
 
 call dein#add('Shougo/dein.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('simnalamburt/vim-mundo')
-call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('pangloss/vim-javascript')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('ap/vim-css-color')
 call dein#add('tpope/vim-unimpaired')
-call dein#add('mileszs/ack.vim')
-
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('Shougo/unite.vim')
 call dein#end()
 
 filetype plugin indent on
@@ -35,7 +34,8 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:unite_source_rec_async_command =
+    \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
 
 " options
 set autoindent
@@ -145,6 +145,9 @@ filetype plugin indent on
 
 " mappings
 nnoremap <F4> :MundoToggle<CR>
+nnoremap <C-p> :Unite file_rec/async<CR>
+nnoremap <space>/ :Unite grep:.<CR>
+nnoremap <space>s :Unite -quick-match buffer<CR>
 
 " split window
 nmap <leader>swh :topleft  vnew<CR>
