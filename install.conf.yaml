@@ -16,6 +16,7 @@
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
     ~/.config/termite: termite/
+    ~/.psqlrc: psqlrc
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.vifm/vifmrc: vifmrc

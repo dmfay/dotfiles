@@ -1,0 +1,6 @@
+\set QUIET 1
+\timing
+\x auto
+\pset null '(null)'
+\set HISTCONTROL ignoredups
+\unset QUIET
