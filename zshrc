@@ -90,4 +90,4 @@ export GREP_COLOR='00;1;35'
 eval $(thefuck --alias)
 
 # pop a calendar
-when cw
+type when >/dev/null 2>&1 && { when cw }

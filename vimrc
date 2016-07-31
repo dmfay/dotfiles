@@ -6,7 +6,6 @@ filetype off
 set runtimepath^=~/.vim/dein.vim
 
 call dein#begin(expand('~/.vim/plugins'))
-
 call dein#add('Shougo/dein.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('simnalamburt/vim-mundo')
