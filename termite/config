@@ -1,5 +1,6 @@
 [options]
 cursor_blink = system
+scrollback_lines = 1000
 
 [colors]
 

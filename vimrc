@@ -37,6 +37,8 @@ endif
 let g:unite_source_rec_async_command =
     \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
 
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
 " options
 set autoindent
 set autoread
@@ -48,6 +50,7 @@ set number
 set smartcase
 set expandtab
 set shiftwidth=2
+set tabstop=2
 set softtabstop=2
 set smarttab
 set hidden
@@ -60,6 +63,8 @@ set wildignore+=*~,*.swp,*.tmp
 set updatetime=250
 set ruler
 set mousefocus
+set foldmethod=syntax
+set foldlevelstart=20
 
 " colors
 colorscheme caput-mortuum
