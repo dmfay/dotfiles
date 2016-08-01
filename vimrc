@@ -20,6 +20,10 @@ call dein#end()
 
 filetype plugin indent on
 
+if dein#check_install()
+  call dein#install()
+endif
+
 " config
 syntax enable
 
