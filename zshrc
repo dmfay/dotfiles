@@ -23,6 +23,7 @@ compinit
 colors
 
 # sources
+source ~/.zsh/detect-os.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/mode.zsh
 
@@ -34,8 +35,13 @@ RPS1='$(git_prompt_string)'
 
 PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
 
+if [ ! -z $LINUX ]; then
+  alias ls='ls -h --color'
+else
+  alias ls='ls -G'
+fi
+
 alias grep='grep --color'
-alias ls='ls -h --color'
 alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
