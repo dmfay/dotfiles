@@ -87,7 +87,7 @@ export LS_COLORS=
 export GREP_COLOR='00;1;35'
 
 # the fuck
-eval $(thefuck --alias)
+type fuck >/dev/null 2>&1 && { eval $(thefuck --alias) }
 
 # pop a calendar
 type when >/dev/null 2>&1 && { when cw }
