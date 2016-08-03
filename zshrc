@@ -26,7 +26,10 @@ colors
 source ~/.zsh/detect-os.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/mode.zsh
-source ~/.zsh/node.zsh
+
+if [ ! -z $OSX ]; then
+  source ~/.zsh/osx/node.zsh
+fi
 
 # vars
 export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
