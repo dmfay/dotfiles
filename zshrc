@@ -26,9 +26,10 @@ colors
 source ~/.zsh/detect-os.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/mode.zsh
+source ~/.zsh/node.zsh
 
 # vars
-export PATH=$PATH:/home/dian/.gem/ruby/2.3.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
