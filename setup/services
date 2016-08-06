@@ -5,10 +5,10 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
-cp services/system/* /usr/lib/systemd/system
-cp services/bin/* /usr/local/bin
+cp ../services/system/* /usr/lib/systemd/system
+cp ../services/bin/* /usr/local/bin
 
-for f in services/system/*.timer; do
+for f in ../services/system/*.timer; do
   timer=`basename "$f"`
 
   echo "enabling $timer"
@@ -19,4 +19,5 @@ done
 
 systemctl daemon-reload
 
+echo "daemons reloaded"
 exit 0
