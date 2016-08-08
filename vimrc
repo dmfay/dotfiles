@@ -152,6 +152,12 @@ command! Kwbd call s:Kwbd(1)
 filetype plugin indent on
 
 " mappings
+
+" up/down in wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" plugins
 nnoremap <F4> :MundoToggle<CR>
 nnoremap <C-p> :Unite file_rec/async<CR>
 nnoremap <space>/ :Unite grep:.<CR>
