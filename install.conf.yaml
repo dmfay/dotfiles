@@ -13,6 +13,7 @@
     ~/.gitconfig: gitconfig
     ~/.xinitrc: xinitrc
     ~/.config/clipit: clipit/
+    ~/.config/dunst: dunst/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
     ~/.config/termite: termite/

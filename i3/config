@@ -200,5 +200,6 @@ assign [class="^Steam$"]    3
 exec --no-startup-id redshift || redshift -l 42.3:-83.0
 exec --no-startup-id clipit
 exec --no-startup-id compton
+exec --no-startup-id dunst
 
 exec ~/.config/i3/restore.sh &

@@ -37,4 +37,6 @@ fi
 
 eval `ssh-agent`
 
+udiskie --tray &
+
 exec dbus-launch i3
