@@ -38,7 +38,7 @@ export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-PROMPT='%(!.%{$fg[red]%}.%{$fg[green]%})%n%{$reset_color%}@%{$fg[red]%}%m%{$reset_color%}: %{$fg_no_bold[cyan]%}%~%{$reset_color%} ${vim_mode} %{$reset_color%}%'
+PROMPT='%(!.%F{1}.%F{2})%n%F{reset}@%F{1}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
 
 if [ ! -z $LINUX ]; then
   alias ls='ls -h --color'
