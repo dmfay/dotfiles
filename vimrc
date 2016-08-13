@@ -7,6 +7,7 @@ set runtimepath^=~/.vim/dein.vim
 
 call dein#begin(expand('~/.vim/plugins'))
 call dein#add('Shougo/dein.vim')
+call dein#add('Raimondi/delimitMate')
 call dein#add('tpope/vim-surround')
 call dein#add('simnalamburt/vim-mundo')
 call dein#add('pangloss/vim-javascript')
@@ -30,6 +31,8 @@ syntax enable
 let g:gitgutter_sign_column_always = 1
 let g:gitgutter_max_signs = 500  " default value
 let g:gitgutter_realtime = 1
+
+let g:delimitMate_expand_cr = 1
 
 let g:python_host_prog = '/usr/bin/python2'
 
@@ -77,6 +80,7 @@ command! W w !sudo tee % > /dev/null
 command! C w !xsel -i -b
 command! CC %w !xsel -i -b
 command! P r !xsel -o -b
+command! J %!python -m json.tool
 
 " functions
 source ~/.vim/functions/whitespace.vim
@@ -116,10 +120,14 @@ nnoremap <A-j> <C-W>j
 nnoremap <A-k> <C-W>k
 nnoremap <A-l> <C-W>l
 
+" Hide search highlighting
+map <Leader>h :set invhls <CR>
+
+" Duplicate a selection
+" Visual mode: D
+vmap D y'>p
+
 " conveniences
-inoremap {<CR> {<CR>}<Esc>ko<Tab>
-inoremap ( ()<Esc>i
-inoremap " ""<Esc>i
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " watch for changes

@@ -97,7 +97,7 @@ elseif &background == "dark"
     hi PmenuSel gui=NONE guifg=NONE guibg=#433f5a
     hi PmenuThumb gui=NONE guifg=NONE guibg=#783b65
     hi Question gui=NONE guifg=NONE guibg=NONE
-    hi Search gui=italic guifg=NONE guibg=#783b65
+    hi Search gui=italic guifg=NONE guibg=#552a48
     hi SignColumn gui=NONE guifg=#f8d48b guibg=NONE
     hi Special gui=NONE guifg=#98d3dd guibg=NONE
     hi SpecialKey gui=NONE guifg=#616161 guibg=NONE

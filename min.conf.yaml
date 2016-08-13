@@ -2,15 +2,12 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - mkdir -p ~/.config
     - mkdir -p ~/.vifm
 
 - link:
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
-    ~/.config/fontconfig: fontconfig/
-    ~/.config/termite: termite/
     ~/.psqlrc: psqlrc
     ~/.vim: vim
     ~/.vimrc: vimrc
