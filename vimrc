@@ -3,6 +3,7 @@
 set nocompatible              " be iMproved, required
 filetype off
 
+set statusline=
 set runtimepath^=~/.vim/dein.vim
 
 call dein#begin(expand('~/.vim/plugins'))
@@ -17,6 +18,7 @@ call dein#add('ap/vim-css-color')
 call dein#add('tpope/vim-unimpaired')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
+call dein#add('scrooloose/syntastic')
 call dein#end()
 
 filetype plugin indent on
@@ -44,6 +46,17 @@ let g:unite_source_rec_async_command =
     \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_enable_signs=1
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_stl_format = 'syntax error line %F (%e err %w warn)'
 
 " options
 set autoindent
@@ -133,5 +146,5 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 " watch for changes
 augroup myvimrc
   au!
-  au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+  au BufWritePost .vimrc,vimrc so $MYVIMRC
 augroup END

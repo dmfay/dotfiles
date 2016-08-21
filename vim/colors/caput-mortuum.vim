@@ -1,4 +1,4 @@
-hi clear
+"hi clear
 syntax reset
 let g:colors_name = "caput-mortuum"
 if &background == "light"
@@ -79,8 +79,8 @@ elseif &background == "dark"
     hi DiffDelete gui=NONE guifg=NONE guibg=#281526
     hi DiffText gui=NONE guifg=NONE guibg=#433f5a
     hi Directory gui=bold guifg=#efe1eb guibg=NONE
-    hi Error gui=NONE guifg=NONE guibg=#281526
-    hi ErrorMsg gui=bold guifg=NONE guibg=#3b0d14
+    hi Error gui=bold,underline guifg=#783b65 guibg=NONE
+    hi ErrorMsg gui=bold guifg=NONE guibg=#281526
     hi FoldColumn gui=NONE guifg=#98d3dd guibg=NONE
     hi Folded gui=NONE guifg=#98d3dd guibg=NONE
     hi Ignore gui=NONE guifg=NONE guibg=NONE
@@ -114,15 +114,17 @@ elseif &background == "dark"
     hi TabLineFill gui=NONE guifg=NONE guibg=#281526
     hi TabLineSel gui=reverse guifg=#15151e guibg=#783b65
     hi Title gui=NONE guifg=#88a0e2 guibg=NONE
-    hi Todo gui=bold guifg=NONE guibg=NONE
+    hi Todo gui=bold guifg=#783b65 guibg=NONE
     hi Type gui=NONE guifg=#98d3dd guibg=NONE
     hi Underlined gui=NONE guifg=NONE guibg=NONE
     hi VertSplit gui=NONE guifg=#333333 guibg=NONE
     hi Visual gui=NONE guifg=NONE guibg=#783b65
     hi VisualNOS gui=NONE guifg=NONE guibg=NONE
-    hi WarningMsg gui=NONE guifg=NONE guibg=#3b0d14
+    hi WarningMsg gui=NONE guifg=NONE guibg=#281526
     hi WildMenu gui=NONE guifg=NONE guibg=#433f5a
     hi lCursor gui=NONE guifg=NONE guibg=NONE
     hi Identifier gui=NONE guifg=NONE guibg=NONE
     hi PreProc gui=NONE guifg=NONE guibg=NONE
+    hi SyntasticErrorSign gui=bold guifg=#783b65 guibg=#1e1e2a
+    hi SyntasticWarningSign gui=bold guifg=#552a48 guibg=#1e1e2a
 endif
