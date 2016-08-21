@@ -25,6 +25,7 @@ colors
 # sources
 source ~/.zsh/detect-os.zsh
 source ~/.zsh/git.zsh
+source ~/.zsh/man.zsh
 source ~/.zsh/mode.zsh
 source ~/.zsh/grep-color.zsh
 
