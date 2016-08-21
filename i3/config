@@ -24,7 +24,7 @@ bindsym $mod+i border pixel 1
 # define colors
 
 set $base   #16161f
-set $text   #f0e2ec
+set $text   #efe1eb
 set $dtxt   #888888
 set $main   #552a48
 set $dark   #271425

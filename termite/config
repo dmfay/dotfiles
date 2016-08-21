@@ -5,15 +5,15 @@ scrollback_lines = 1000
 [colors]
 
 # special
-foreground      = #f0e2ec
-foreground_bold = #f0e2ec
+foreground      = #efe1eb
+foreground_bold = #efe1eb
 cursor          = #773b65
-cursor_foreground = #f0e2ec
+cursor_foreground = #efe1eb
 background      = #16161f
 
 # black
 color0  = #1d1d29
-color8  = #f0e2ec
+color8  = #efe1eb
 
 # red
 color1  = #773b65
@@ -40,5 +40,5 @@ color6  = #97d3dc
 color14 = #97d3dc
 
 # white
-color7  = #f0e2ec
-color15 = #f0e2ec
+color7  = #efe1eb
+color15 = #efe1eb
