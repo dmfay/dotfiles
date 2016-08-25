@@ -18,7 +18,7 @@ call dein#add('ap/vim-css-color')
 call dein#add('tpope/vim-unimpaired')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
-call dein#add('scrooloose/syntastic')
+call dein#add('neomake/neomake')
 call dein#end()
 
 filetype plugin indent on
@@ -47,16 +47,14 @@ let g:unite_source_rec_async_command =
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:neomake_javascript_jshint_maker = {
+    \ 'args': ['--verbose'],
+    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+    \ }
+let g:neomake_javascript_enabled_makers = ['jshint']
 
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_enable_signs=1
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_stl_format = 'syntax error line %F (%e err %w warn)'
+let g:neomake_warning_sign = {'text': '', 'texthl': 'WarningMsg'}
+let g:neomake_error_sign = {'text': '', 'texthl': 'ErrorMsg'}
 
 " options
 set autoindent
@@ -142,6 +140,9 @@ vmap D y'>p
 
 " conveniences
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
+" lint on write/switch
+autocmd! BufWritePost,BufEnter * Neomake
 
 " watch for changes
 augroup myvimrc
