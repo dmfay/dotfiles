@@ -82,6 +82,7 @@ set ruler
 set mousefocus
 set foldmethod=syntax
 set foldlevelstart=20
+set termguicolors
 
 " colors
 colorscheme caput-mortuum
