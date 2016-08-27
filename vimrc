@@ -1,6 +1,6 @@
 " plugin management
 
-set nocompatible              " be iMproved, required
+set nocompatible
 filetype off
 
 set statusline=
@@ -27,11 +27,10 @@ if dein#check_install()
   call dein#install()
 endif
 
-" config
-syntax enable
+" plugin config
 
 let g:gitgutter_sign_column_always = 1
-let g:gitgutter_max_signs = 500  " default value
+let g:gitgutter_max_signs = 500
 let g:gitgutter_realtime = 1
 
 let g:delimitMate_expand_cr = 1
@@ -57,6 +56,8 @@ let g:neomake_warning_sign = {'text': '', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '', 'texthl': 'ErrorMsg'}
 
 " options
+syntax enable
+
 set autoindent
 set autoread
 set background=dark
@@ -98,13 +99,13 @@ command! J %!python -m json.tool
 source ~/.vim/functions/whitespace.vim
 source ~/.vim/functions/kwbd.vim
 
-filetype plugin indent on
-
 " mappings
 
 " up/down in wrapped lines
 nnoremap j gj
 nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " plugins
 nnoremap <F4> :MundoToggle<CR>
