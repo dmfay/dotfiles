@@ -18,6 +18,7 @@ call dein#add('ap/vim-css-color')
 call dein#add('tpope/vim-unimpaired')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/vimfiler.vim')
 call dein#add('neomake/neomake')
 call dein#end()
 
@@ -54,6 +55,8 @@ let g:neomake_javascript_enabled_makers = ['jshint']
 
 let g:neomake_warning_sign = {'text': '', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '', 'texthl': 'ErrorMsg'}
+
+let g:vimfiler_as_default_explorer = 1
 
 " options
 syntax enable
@@ -108,6 +111,7 @@ vnoremap j gj
 vnoremap k gk
 
 " plugins
+nnoremap <F2> :VimFilerExplorer<CR>
 nnoremap <F4> :MundoToggle<CR>
 nnoremap <C-p> :Unite file_rec/async<CR>
 nnoremap <space>/ :Unite grep:.<CR>
