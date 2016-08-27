@@ -22,19 +22,20 @@ autoload -U compinit colors
 compinit
 colors
 
+# vars
+export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
+
 # sources
 source ~/.zsh/detect-os.zsh
 source ~/.zsh/git.zsh
 source ~/.zsh/man.zsh
 source ~/.zsh/mode.zsh
 source ~/.zsh/grep-color.zsh
+source ~/.zsh/plugins.zsh
 
 if [ ! -z $OSX ]; then
   source ~/.zsh/osx/node.zsh
 fi
-
-# vars
-export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
