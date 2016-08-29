@@ -1,6 +1,6 @@
-[[ -d ~/.zplug ]] || return
+[[ -n $ZPLUG_HOME ]] || return
 
-source ~/.zplug/init.zsh
+source $ZPLUG_HOME/init.zsh
 
 zplug "arzzen/calc.plugin.zsh"
 zplug "supercrabtree/k"
