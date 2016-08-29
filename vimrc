@@ -12,6 +12,7 @@ call dein#add('Raimondi/delimitMate')
 call dein#add('tpope/vim-surround')
 call dein#add('simnalamburt/vim-mundo')
 call dein#add('pangloss/vim-javascript')
+call dein#add('digitaltoad/vim-pug')
 call dein#add('airblade/vim-gitgutter')
 call dein#add('terryma/vim-multiple-cursors')
 call dein#add('ap/vim-css-color')
@@ -137,6 +138,12 @@ nnoremap <A-h> <C-W>h
 nnoremap <A-j> <C-W>j
 nnoremap <A-k> <C-W>k
 nnoremap <A-l> <C-W>l
+
+" for osx
+nnoremap ˙ <C-W>h
+nnoremap ∆ <C-W>j
+nnoremap ˚ <C-W>k
+nnoremap ¬ <C-W>l
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
