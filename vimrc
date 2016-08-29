@@ -20,6 +20,7 @@ call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/vimfiler.vim')
 call dein#add('neomake/neomake')
+call dein#add('editorconfig/editorconfig-vim')
 call dein#end()
 
 filetype plugin indent on
@@ -53,8 +54,8 @@ let g:neomake_javascript_jshint_maker = {
     \ }
 let g:neomake_javascript_enabled_makers = ['jshint']
 
-let g:neomake_warning_sign = {'text': '', 'texthl': 'WarningMsg'}
-let g:neomake_error_sign = {'text': '', 'texthl': 'ErrorMsg'}
+let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
+let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
 
 let g:vimfiler_as_default_explorer = 1
 
