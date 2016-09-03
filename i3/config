@@ -169,9 +169,9 @@ bindsym $mod+r mode "resize"
 bindsym Print exec maim -s
 
 # volume keys
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindcode 123 exec amixer -q sset Master 5%+ unmute && pkill -RTMIN+1 i3blocks
+bindcode 122 exec amixer -q sset Master 5%- unmute && pkill -RTMIN+1 i3blocks
+bindcode 121 exec amixer -q sset Master toggle && pkill -SIGRTMIN+1 i3blocks
 
 # caps/numlock indicators for i3blocks
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
