@@ -38,7 +38,11 @@ let g:gitgutter_realtime = 1
 
 let g:delimitMate_expand_cr = 1
 
-let g:python_host_prog = '/usr/bin/python2'
+if !empty(glob('/usr/bin/python2'))
+  let g:python_host_prog = '/usr/bin/python2'
+elseif !empty(glob('/usr/local/bin/python'))
+  let g:python_host_prog = '/usr/local/bin/python'
+endif
 
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
