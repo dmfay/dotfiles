@@ -48,6 +48,12 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts =
+  \ '-i --vimgrep --hidden --ignore ' .
+  \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+let g:unite_source_grep_recursive_opt = ''
+
 let g:unite_source_rec_async_command =
     \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
 
@@ -119,7 +125,7 @@ vnoremap k gk
 " plugins
 nnoremap <F2> :VimFilerExplorer<CR>
 nnoremap <F4> :MundoToggle<CR>
-nnoremap <C-p> :Unite file_rec/async<CR>
+nnoremap <C-p> :Unite file_rec/async -start-insert<CR>
 nnoremap <space>/ :Unite grep:.<CR>
 nnoremap <space>s :Unite -quick-match buffer<CR>
 
