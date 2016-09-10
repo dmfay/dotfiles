@@ -128,6 +128,7 @@ nnoremap <F2> :VimFilerExplorer<CR>
 nnoremap <F4> :MundoToggle<CR>
 nnoremap <C-p> :Unite file_rec/async -start-insert<CR>
 nnoremap <space>/ :Unite grep:.<CR>
+nnoremap <space>f :Unite -no-quit grep:.<CR>
 nnoremap <space>s :Unite -quick-match buffer<CR>
 
 " split window
