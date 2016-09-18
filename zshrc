@@ -49,6 +49,7 @@ else
 fi
 
 alias grep='grep --color'
+alias less='less -Xr'
 alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
