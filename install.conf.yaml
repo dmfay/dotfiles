@@ -16,6 +16,8 @@
     ~/.config/dunst: dunst/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
+    ~/.config/nvim: vim
+    ~/.config/nvim/init.vim: vimrc
     ~/.config/termite: termite/
     ~/.psqlrc: psqlrc
     ~/.vim: vim
