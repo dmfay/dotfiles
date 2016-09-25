@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup weekly
+
+[Timer]
+OnCalendar=weekly
+Unit=snebu.service
+
+[Install]
+WantedBy=multi-user.target
