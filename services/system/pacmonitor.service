@@ -1,6 +1,6 @@
 [Unit]
-Description=Run pacman -Sy
+Description=Check for updates
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/pacmonitor
+ExecStart=/usr/bin/pacman -Sy
