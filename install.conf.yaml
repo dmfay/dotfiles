@@ -19,6 +19,7 @@
     ~/.config/nvim: vim
     ~/.config/nvim/init.vim: vimrc
     ~/.config/termite: termite/
+    ~/.muttrc: muttrc
     ~/.psqlrc: psqlrc
     ~/.vim: vim
     ~/.vimrc: vimrc
