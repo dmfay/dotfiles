@@ -3,6 +3,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/.config
+    - mkdir -p ~/.when
     - mkdir -p ~/.vifm
 
 - link:
@@ -16,6 +17,7 @@
     ~/.config/dunst: dunst/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
+    ~/.config/mutt: mutt/
     ~/.config/nvim: vim
     ~/.config/nvim/init.vim: vimrc
     ~/.config/termite: termite/
@@ -24,4 +26,5 @@
     ~/.vim: vim
     ~/.vimrc: vimrc
     ~/.vifm/vifmrc: vifmrc
+    ~/.when/preferences: when/preferences
     ~/.zsh: zsh/
