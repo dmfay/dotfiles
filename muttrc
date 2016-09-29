@@ -3,9 +3,9 @@ set message_cachedir = "~/.mutt/cache/messages"
 
 source "$HOME/.config/mutt/accounts.sh|"
 
-color hdrdefault blue black
-color quoted blue black
-color signature blue black
+color hdrdefault brightred black
+color quoted brightblue black
+color signature brightcyan black
 color attachment red black
 color prompt brightmagenta black
 color message brightred black

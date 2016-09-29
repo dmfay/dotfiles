@@ -26,21 +26,21 @@ colors
 export PATH=$PATH:$HOME/.gem/ruby/2.3.0/bin
 
 # sources
-source ~/.zsh/detect-os.zsh
-source ~/.zsh/git.zsh
-source ~/.zsh/man.zsh
-source ~/.zsh/mode.zsh
-source ~/.zsh/grep-color.zsh
-source ~/.zsh/plugins.zsh
+for f in $HOME/.zsh/*.zsh; do
+  source "$f"
+done
 
-if [ ! -z $OSX ]; then
-  source ~/.zsh/osx/node.zsh
+# os-specific stuff
+if [[ -d $HOME/.zsh/$OS ]]; then
+  for f in $HOME/.zsh/$OS/*.zsh; do
+    source "$f"
+  done
 fi
 
 # Set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-PROMPT='%(!.%F{1}.%F{2})%n%F{reset}@%F{1}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
+PROMPT='%(!.%F{9}.%F{14})%n%F{reset}@%F{9}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
 
 if [ ! -z $LINUX ]; then
   alias ls='ls -h --color'
