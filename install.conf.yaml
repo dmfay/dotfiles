@@ -5,6 +5,7 @@
     - mkdir -p ~/.config
     - mkdir -p ~/.when
     - mkdir -p ~/.vifm
+    - mkdir -p ~/.when
 
 - link:
     ~/.i3blocks: i3blocks/blocks/
