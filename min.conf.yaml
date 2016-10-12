@@ -2,11 +2,14 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - mkdir -p ~/.config
     - mkdir -p ~/.vifm
 
 - link:
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
+    ~/.config/nvim: vim
+    ~/.config/nvim/init.vim: vimrc
     ~/.gitconfig: gitconfig
     ~/.psqlrc: psqlrc
     ~/.vim: vim

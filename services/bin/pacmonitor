@@ -1,5 +1,0 @@
-#!/bin/sh
-
-pacman -Sy
-
-exit 0

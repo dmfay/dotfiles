@@ -1,8 +1,8 @@
 # http://pawelgoscicki.com/archives/2012/09/vi-mode-indicator-in-zsh-prompt/
 
 # see termite/config for color values
-vim_ins_mode="%F{2}[INS]%F{reset}"
-vim_cmd_mode="%F{1}[CMD]%F{reset}"
+vim_ins_mode="%F{10}[INS]%F{reset}"
+vim_cmd_mode="%F{9}[CMD]%F{reset}"
 vim_mode=$vim_ins_mode
 
 function zle-keymap-select {

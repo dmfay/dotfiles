@@ -1,5 +1,18 @@
 [color]
-	ui = auto
+  ui = auto
+[color "branch"]
+  current = yellow bold
+  local = yellow bold
+  remote = green bold
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = cyan bold
 
 [user]
 	email = dian.m.fay@gmail.com

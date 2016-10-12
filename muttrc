@@ -1,0 +1,22 @@
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/messages"
+
+source "$HOME/.config/mutt/accounts.sh|"
+
+color hdrdefault brightred black
+color quoted brightblue black
+color signature brightcyan black
+color attachment red black
+color prompt brightmagenta black
+color message brightred black
+color error red black
+color indicator red black
+color status brightwhite red
+color tree white black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red brightwhite "~N|~O"
+color index red brightwhite "~N|~O"

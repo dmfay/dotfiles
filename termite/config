@@ -8,37 +8,36 @@ scrollback_lines = 1000
 foreground      = #efe1eb
 foreground_bold = #efe1eb
 cursor          = #773b65
-cursor_foreground = #efe1eb
 background      = #16161f
 
 # black
-color0  = #1d1d29
-color8  = #efe1eb
+color0  = #15151e
+color8  = #1e1e2a
 
 # red
-color1  = #773b65
-color9  = #552a48
+color1  = #552a48
+color9  = #773b65
 
 # green
-color2  = #90e574
-color10 = #90e574
+color2  = #4e833d
+color10 = #92e576
 
 # yellow
-color3  = #f8d48a
-color11 = #f8d48a
+color3  = #86734c
+color11 = #f8d48b
 
 # blue
-color4  = #89a1e2
-color12 = #89a1e2
+color4  = #2f4275
+color12 = #8da6ea
 
 # magenta
-color5  = #e5a8ee
-color13 = #9065b7
+color5  = #9066b7
+color13 = #eea8eb
 
 # cyan
-color6  = #97d3dc
+color6  = #477279
 color14 = #97d3dc
 
 # white
-color7  = #efe1eb
+color7  = #aa9fa7
 color15 = #efe1eb

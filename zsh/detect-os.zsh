@@ -1,7 +1,7 @@
 if [[ `uname` == 'Linux' ]]; then
-  export LINUX=1
+  export OS=linux
   export ZPLUG_HOME=~/.zplug
 elif [[ `uname` == 'Darwin' ]]; then
-  export OSX=1
+  export OS=osx
   export ZPLUG_HOME=/usr/local/opt/zplug
 fi

@@ -1,0 +1,9 @@
+[Unit]
+Description=Write installed package list daily
+
+[Timer]
+OnCalendar=daily
+Unit=pacbackup.service
+
+[Install]
+WantedBy=multi-user.target

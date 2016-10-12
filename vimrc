@@ -23,6 +23,7 @@ call dein#add('Shougo/vimfiler.vim')
 call dein#add('neomake/neomake')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('tpope/vim-commentary')
+call dein#add('tommcdo/vim-exchange')
 call dein#end()
 
 filetype plugin indent on

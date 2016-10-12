@@ -2,13 +2,56 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
-DOTBOT_DIR="dotbot"
+services=''
+config=install.conf.yaml
 
-DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+while getopts 'hsc:' flag; do
+  case "$flag" in
+    h)
+      cat <<EOF
+Set up system configuration.
 
-cd "${BASEDIR}"
-git submodule update --init --recursive "${DOTBOT_DIR}"
+Options:
+  c
+    Supply a different config file. Default is install.conf.yaml.
+  s
+    Additionally install systemctl services and timers.
+EOF
+      exit 0
+      ;;
+    s) services=true && shift ;;
+    c) config="$OPTARG" && shift 2 ;;
+  esac
+done
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+dotbot_dir="dotbot"
+dotbot_bin="bin/dotbot"
+basedir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+cd "${basedir}"
+git submodule update --init --recursive "${dotbot_dir}"
+
+"${basedir}/${dotbot_dir}/${dotbot_bin}" -d "${basedir}" -c "${config}" "${@}"
+
+if [[ ! -z "$services" ]]; then
+  echo
+  echo "Installing services. This requires sudo."
+
+  sudo cp services/* /usr/lib/systemd/system > /dev/null
+
+  echo
+
+  for f in services/*.timer; do
+    timer=`basename "$f"`
+
+    echo "Enabling $timer"
+
+    sudo systemctl start "$timer" > /dev/null
+    sudo systemctl enable "$timer" > /dev/null
+  done
+
+  sudo systemctl daemon-reload > /dev/null
+
+  echo "Services installed."
+  exit 0
+fi

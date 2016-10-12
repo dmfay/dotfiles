@@ -1,0 +1,4 @@
+calendar = /home/dian/.when/calendar
+editor = nvim
+calendar_today_style = "bold,fgyellow"
+items_today_style = "bold,fgyellow"

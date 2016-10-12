@@ -3,14 +3,14 @@
 
 setopt prompt_subst
 
-GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$reset_color%}"
-GIT_PROMPT_SUFFIX="%{$fg[green]%}]%{$reset_color%}"
-GIT_PROMPT_AHEAD="%{$fg[red]%}ANUM%{$reset_color%}"
-GIT_PROMPT_BEHIND="%{$fg[cyan]%}BNUM%{$reset_color%}"
-GIT_PROMPT_MERGING="%{$fg[magenta]%}⚡︎%{$reset_color%}"
-GIT_PROMPT_UNTRACKED="%{$fg[red]%}●%{$reset_color%}"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}●%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}●%{$reset_color%}"
+GIT_PROMPT_PREFIX="%F{10}[%F{reset}"
+GIT_PROMPT_SUFFIX="%F{10}]%F{reset}"
+GIT_PROMPT_AHEAD="%F{9}ANUM%F{reset}"
+GIT_PROMPT_BEHIND="%F{14}BNUM%F{reset}"
+GIT_PROMPT_MERGING="%F{13}⚡︎%F{reset}"
+GIT_PROMPT_UNTRACKED="%F{9}●%F{reset}"
+GIT_PROMPT_MODIFIED="%F{11}●%F{reset}"
+GIT_PROMPT_STAGED="%F{10}●%F{reset}"
 
 parse_git_repo() {
   (basename "$(git rev-parse --show-toplevel)") 2> /dev/null
@@ -62,7 +62,7 @@ parse_git_state() {
 git_prompt_string() {
   local git_repo="$(parse_git_repo)"
   local git_branch="$(parse_git_branch)"
-  [ -n "$git_repo" ] && echo "$(parse_git_state)$GIT_PROMPT_PREFIX%{$fg[cyan]%}$git_repo/${git_branch#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
+  [ -n "$git_repo" ] && echo "$(parse_git_state)$GIT_PROMPT_PREFIX%F{14}$git_repo/${git_branch#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
 alias gtree="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"

@@ -1,5 +1,5 @@
 [Unit]
-Description=Update pacman db hourly
+Description=Check for updates hourly
 
 [Timer]
 OnBootSec=5min
