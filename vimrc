@@ -57,6 +57,7 @@ let g:unite_source_grep_recursive_opt = ''
 
 let g:unite_source_rec_async_command =
     \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
+let g:unite_source_rec_async_opts = '--force-redraw'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
@@ -173,6 +174,9 @@ map <Leader>h :set invhls <CR>
 " Duplicate a selection
 " Visual mode: D
 vmap D y'>p
+
+" Select all
+nnoremap <C-A> ggvG$
 
 " conveniences
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
