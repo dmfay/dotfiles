@@ -57,4 +57,4 @@ func! s:Kwbd(kwbdStage)
   endif
 endfunction
 
-command! Kwbd call s:Kwbd(1)
+command! K call s:Kwbd(1)
