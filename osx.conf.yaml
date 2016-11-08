@@ -3,9 +3,11 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/.config
-    - mkdir -p ~/.vifm
+    - mkdir -p ~/.kwm
 
 - link:
+    ~/.kwm/kwmrc: kwm/kwmrc
+    ~/.khdrc: kwm/khdrc
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.config/nvim: vim
@@ -14,5 +16,4 @@
     ~/.psqlrc: psqlrc
     ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.vifm/vifmrc: vifmrc
     ~/.zsh: zsh/
