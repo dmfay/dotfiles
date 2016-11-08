@@ -1,7 +1,14 @@
 set header_cache = "~/.mutt/cache/headers"
 set message_cachedir = "~/.mutt/cache/messages"
+set include # include message in reply
+set nomark_old # don't mark new+unread messages as old
+set nostrict_threads # looser threading criteria
 
 source "$HOME/.config/mutt/accounts.sh|"
+
+bind index G imap-fetch-mail
+bind pager 'j' next-line
+bind pager 'k' previous-line
 
 color hdrdefault brightred black
 color quoted brightblue black
