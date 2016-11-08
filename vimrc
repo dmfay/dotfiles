@@ -62,12 +62,6 @@ let g:unite_source_rec_async_opts = '--force-redraw'
 
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
-let g:neomake_javascript_jshint_maker = {
-    \ 'args': ['--verbose'],
-    \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
-    \ }
-let g:neomake_javascript_enabled_makers = ['jshint']
-
 let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
 
@@ -184,6 +178,9 @@ inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " lint on write/switch
 autocmd! BufWritePost,BufEnter * Neomake
+
+" syntax exceptions
+au BufReadPost Jenkinsfile set syntax=groovy
 
 " watch for changes
 augroup myvimrc
