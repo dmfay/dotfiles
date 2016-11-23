@@ -157,27 +157,30 @@ nnoremap ˚ <C-W>k
 nnoremap ¬ <C-W>l
 
 " copy/paste to/from system clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
+vnoremap <leader>y  "+y
+nnoremap <leader>Y  "+yg_
+nnoremap <leader>y  "+y
 
 nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
-" Hide search highlighting
+" hide search highlighting
 map <Leader>h :set invhls <CR>
 
-" Duplicate a selection
-" Visual mode: D
+" duplicate a selection in visual mode
 vmap D y'>p
 
-" Select all
+" select all
 nnoremap <C-A> ggvG$
 
-" conveniences
+" skip out of block
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+
+" insert a single character
+nnoremap z i <Esc>r
+nnoremap Z a <Esc>r
 
 " lint on write/switch
 autocmd! BufWritePost,BufEnter * Neomake
