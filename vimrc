@@ -147,6 +147,9 @@ nnoremap <A-j> <C-W>j
 nnoremap <A-k> <C-W>k
 nnoremap <A-l> <C-W>l
 
+" terminal
+tnoremap <C-[><C-[> <C-\><C-n>
+
 " for osx
 nnoremap ˙ <C-W>h
 nnoremap ∆ <C-W>j
