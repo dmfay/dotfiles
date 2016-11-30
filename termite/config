@@ -12,7 +12,7 @@ background      = #16161f
 
 # black
 color0  = #15151e
-color8  = #51516d
+color8  = #8f8b9e
 
 # red
 color1  = #552a48
@@ -23,7 +23,7 @@ color2  = #4e833d
 color10 = #92e576
 
 # yellow
-color3  = #86734c
+color3  = #9a8559
 color11 = #f8d48b
 
 # blue
