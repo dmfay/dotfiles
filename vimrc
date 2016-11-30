@@ -179,8 +179,10 @@ nnoremap <C-A> ggvG$
 inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " insert a single character
-nnoremap z i <Esc>r
-nnoremap Z a <Esc>r
+nnoremap <leader>I I <Esc>r
+nnoremap <leader>i i <Esc>r
+nnoremap <leader>A A <Esc>r
+nnoremap <leader>a a <Esc>r
 
 " lint on write/switch
 autocmd! BufWritePost,BufEnter * Neomake
