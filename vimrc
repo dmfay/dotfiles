@@ -95,7 +95,10 @@ set ruler
 set mousefocus
 set foldmethod=syntax
 set foldlevelstart=20
-set termguicolors
+
+if has('nvim')
+  set termguicolors
+endif
 
 " colors
 colorscheme caput-mortuum
@@ -148,7 +151,9 @@ nnoremap <A-k> <C-W>k
 nnoremap <A-l> <C-W>l
 
 " terminal
-tnoremap <C-[><C-[> <C-\><C-n>
+if has('nvim')
+  tnoremap <C-[><C-[> <C-\><C-n>
+endif
 
 " for osx
 nnoremap ˙ <C-W>h
