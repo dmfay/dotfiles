@@ -26,4 +26,4 @@
 # 45  Magenta
 # 46  Cyan
 # 47  White
-export GREP_COLOR='00;1;35'
+export GREP_COLOR='00;1;31'

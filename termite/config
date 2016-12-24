@@ -1,6 +1,6 @@
 [options]
 cursor_blink = system
-scrollback_lines = 1000
+scrollback_lines = 10000
 
 [colors]
 
@@ -15,11 +15,11 @@ color0  = #15151e
 color8  = #8f8b9e
 
 # red
-color1  = #552a48
-color9  = #773b65
+color1  = #773b65
+color9  = #dc548c
 
 # green
-color2  = #4e833d
+color2  = #66a552
 color10 = #92e576
 
 # yellow

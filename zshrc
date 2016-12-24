@@ -42,7 +42,7 @@ RPS1='$(git_prompt_string)'
 
 PROMPT='%(!.%F{9}.%F{10})%n%F{reset}@%F{9}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
 
-if [ ! -z $LINUX ]; then
+if [ $OS = 'linux' ]; then
   alias ls='ls -h --color'
 else
   alias ls='ls -G'
