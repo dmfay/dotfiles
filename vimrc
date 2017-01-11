@@ -122,6 +122,10 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
+" screen up/down
+nnoremap <C-j> <C-e>
+nnoremap <C-k> <C-y>
+
 " plugins
 nnoremap <F2> :VimFilerExplorer<CR>
 nnoremap <F4> :MundoToggle<CR>
