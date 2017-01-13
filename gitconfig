@@ -18,3 +18,5 @@
 [user]
 	email = dian.m.fay@gmail.com
 	name = Dian Fay
+[core]
+	pager = diff-so-fancy | less --tabs=2 -RFX
