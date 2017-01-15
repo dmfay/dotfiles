@@ -43,11 +43,13 @@ RPS1='$(git_prompt_string)'
 PROMPT='%(!.%F{9}.%F{10})%n%F{reset}@%F{9}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
 
 if [ $OS = 'linux' ]; then
+  alias pacman='pacaur'
   alias ls='ls -h --color'
 else
   alias ls='ls -G'
 fi
 
+alias sudo='sudo '
 alias grep='grep --color'
 alias less='less -Xr'
 alias rm='rm -v'
