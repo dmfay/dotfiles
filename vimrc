@@ -18,7 +18,7 @@ call dein#add('terryma/vim-multiple-cursors')
 call dein#add('ap/vim-css-color')
 call dein#add('tpope/vim-unimpaired')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/vimfiler.vim')
 call dein#add('neomake/neomake')
 call dein#add('editorconfig/editorconfig-vim')
@@ -50,17 +50,25 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-let g:unite_source_grep_command = 'ag'
-let g:unite_source_grep_default_opts =
-  \ '-i --vimgrep --hidden --ignore ' .
-  \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
-let g:unite_source_grep_recursive_opt = ''
+call denite#custom#var('file_rec', 'command',
+    \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', ''])
 
-let g:unite_source_rec_async_command =
-    \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', '']
-let g:unite_source_rec_async_opts = '--force-redraw'
+call denite#custom#var('grep', 'command', ['ag'])
+call denite#custom#var('grep', 'default_opts', [
+  \ '-i', '--nopager', '--nocolor', '--nogroup', '--column', '--hidden',
+  \ '--ignore', "'.hg'",
+  \ '--ignore', "'.svn'",
+  \ '--ignore', "'.git'"
+  \ ])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', ['--match'])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
 
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+
+call denite#custom#option('default', 'prompt', '>')
 
 let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
@@ -129,10 +137,10 @@ nnoremap <C-k> <C-y>
 " plugins
 nnoremap <F2> :VimFilerExplorer<CR>
 nnoremap <F4> :MundoToggle<CR>
-nnoremap <C-p> :Unite file_rec/async -start-insert<CR>
-nnoremap <space>/ :Unite grep:.<CR>
-nnoremap <space>f :Unite -no-quit grep:.<CR>
-nnoremap <space>s :Unite -quick-match buffer<CR>
+nnoremap <C-p> :Denite -direction=topleft file_rec<CR>
+nnoremap <space>/ :Denite -direction=topleft grep<CR>
+nnoremap <space>f :Denite -direction=topleft -no-quit -mode=normal grep:.<CR>
+nnoremap <space>s :Denite -direction=topleft -quick-match buffer<CR>
 
 " split window
 nmap <leader>swh :topleft  vnew<CR>
