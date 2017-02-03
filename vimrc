@@ -46,24 +46,17 @@ elseif !empty(glob('/usr/local/bin/python'))
   let g:python_host_prog = '/usr/local/bin/python'
 endif
 
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+if executable('rg')
+  call denite#custom#var('file_rec', 'command', ['rg', '--files', '--glob', '!.git'])
+  call denite#custom#var('grep', 'command', ['rg'])
+  call denite#custom#var('grep', 'recursive_opts', [])
+  call denite#custom#var('grep', 'final_opts', [])
+  call denite#custom#var('grep', 'separator', ['--'])
+  call denite#custom#var('grep', 'default_opts', ['--vimgrep', '--no-heading'])
+else
+  call denite#custom#var('file_rec', 'command',
+      \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
-
-call denite#custom#var('file_rec', 'command',
-    \ ['ag', '--follow', '--nogroup', '--nocolor', '--hidden', '-g', ''])
-
-call denite#custom#var('grep', 'command', ['ag'])
-call denite#custom#var('grep', 'default_opts', [
-  \ '-i', '--nopager', '--nocolor', '--nogroup', '--column', '--hidden',
-  \ '--ignore', "'.hg'",
-  \ '--ignore', "'.svn'",
-  \ '--ignore', "'.git'"
-  \ ])
-call denite#custom#var('grep', 'recursive_opts', [])
-call denite#custom#var('grep', 'pattern_opt', ['--match'])
-call denite#custom#var('grep', 'separator', ['--'])
-call denite#custom#var('grep', 'final_opts', [])
 
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
