@@ -75,8 +75,10 @@ set autoindent
 set autoread
 set background=dark
 set backspace=2
+set cursorline
 set foldcolumn=1
 set ignorecase
+set lazyredraw
 set number
 set smartcase
 set expandtab
@@ -177,16 +179,13 @@ vnoremap <leader>p "+p
 vnoremap <leader>P "+P
 
 " hide search highlighting
-map <Leader>h :set invhls <CR>
+map <Leader>\ :noh<CR>
 
 " duplicate a selection in visual mode
 vmap D y'>p
 
 " select all
 nnoremap <C-A> ggvG$
-
-" skip out of block
-inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 " insert a single character
 nnoremap <leader>I I <Esc>r
