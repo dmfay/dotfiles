@@ -193,9 +193,9 @@ bar {
     status_command i3blocks
 }
 
-assign [class="^Vivaldi$"] 1
+assign [class="^Vivaldi-stable$"] 1
 assign [class="^Keepassx2$"] 2
-assign [class="Sylpheed"] 2
+assign [class="^Thunderbird$"] 2
 assign [class="^Pidgin$"]   2
 assign [class="^Steam$"]    3
 

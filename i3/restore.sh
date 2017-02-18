@@ -6,6 +6,6 @@ done
 
 (vivaldi-stable &)
 (keepassx2 &)
-(sylpheed &)
+(thunderbird &)
 (pidgin &)
 (steam &)

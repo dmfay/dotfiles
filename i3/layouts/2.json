@@ -29,11 +29,11 @@
        "x": 640,
        "y": 342
     },
-    "name": "Sylpheed",
+    "name": "Thunderbird",
     "percent": 0.65,
     "swallows": [
        {
-        "class": "Sylpheed"
+        "class": "Thunderbird"
        }
     ],
     "type": "con"
