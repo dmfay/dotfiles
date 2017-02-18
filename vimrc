@@ -24,6 +24,7 @@ call dein#add('neomake/neomake')
 call dein#add('editorconfig/editorconfig-vim')
 call dein#add('tpope/vim-commentary')
 call dein#add('tommcdo/vim-exchange')
+call dein#add('ingydotnet/yaml-vim')
 call dein#end()
 
 filetype plugin indent on
@@ -99,6 +100,9 @@ set mousefocus
 set foldmethod=syntax
 set foldlevelstart=20
 set clipboard=unnamedplus
+" for alt-hjkl buffer switching
+" https://github.com/neovim/neovim/issues/5792
+set ttimeoutlen=100
 
 if has('nvim')
   set termguicolors
