@@ -66,6 +66,7 @@ call denite#custom#option('default', 'prompt', '>')
 
 let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
+let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:vimfiler_as_default_explorer = 1
 
