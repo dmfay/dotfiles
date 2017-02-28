@@ -168,7 +168,7 @@ bindsym $mod+x [urgent=latest] focus
 bindsym $mod+r mode "resize"
 
 # screenshot
-bindsym Print exec maim -s
+bindsym --release Print exec --no-startup-id maim -s ~/$(date +%s).png && notify-send 'Image captured!'
 
 # volume keys
 bindcode 123 exec amixer -q sset Master 5%+ unmute && pkill -RTMIN+1 i3blocks
