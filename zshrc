@@ -15,6 +15,8 @@ setopt NO_FLOW_CONTROL
 setopt RM_STAR_WAIT
 # don't display RPROMPT for previously accepted lines; only display it next to current line
 setopt transient_rprompt
+# extra stuff
+setopt extendedglob
 
 zstyle :compinstall filename '/home/dian/.zshrc'
 
@@ -56,9 +58,14 @@ alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
 alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
+alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # the fuck
 type fuck >/dev/null 2>&1 && { eval $(thefuck --alias) }
 
 # pop a calendar
 type when >/dev/null 2>&1 && { when cw }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/dian/.sdkman"
+[[ -s "/home/dian/.sdkman/bin/sdkman-init.sh" ]] && source "/home/dian/.sdkman/bin/sdkman-init.sh"
