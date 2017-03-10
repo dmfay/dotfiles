@@ -25,6 +25,7 @@ call dein#add('editorconfig/editorconfig-vim')
 call dein#add('tpope/vim-commentary')
 call dein#add('tommcdo/vim-exchange')
 call dein#add('ingydotnet/yaml-vim')
+call dein#add('tfnico/vim-gradle')
 call dein#end()
 
 filetype plugin indent on
@@ -73,7 +74,7 @@ let g:vimfiler_as_default_explorer = 1
 " options
 syntax enable
 
-set autoindent
+set smartindent
 set autoread
 set background=dark
 set backspace=2
@@ -192,7 +193,8 @@ nnoremap <leader>a a <Esc>r
 " lint on write/switch
 autocmd! BufWritePost,BufEnter * Neomake
 
-" syntax exceptions
+" syntax customizations
+au FileType groovy setlocal softtabstop=4 shiftwidth=4 expandtab
 au BufReadPost Jenkinsfile set syntax=groovy
 
 " watch for changes
