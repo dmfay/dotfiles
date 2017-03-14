@@ -42,7 +42,7 @@ if [[ ! -z "$services" ]]; then
   echo
 
   for f in services/*.timer; do
-    timer=`basename "$f"`
+    timer=$(basename "$f")
 
     echo "Enabling $timer"
 
