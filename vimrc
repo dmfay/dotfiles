@@ -60,10 +60,13 @@ else
       \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
 
+call denite#custom#map('insert', '<C-h>', '<denite:move_to_first_line>', 'noremap')
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+call denite#custom#map('insert', '<C-l>', '<denite:move_to_last_line>', 'noremap')
 
 call denite#custom#option('default', 'prompt', '>')
+call denite#custom#option('default', 'cursor_wrap', v:true)
 
 let g:neomake_warning_sign = {'text': '?', 'texthl': 'WarningMsg'}
 let g:neomake_error_sign = {'text': '!', 'texthl': 'ErrorMsg'}
