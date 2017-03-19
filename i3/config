@@ -175,24 +175,6 @@ bindcode 123 exec amixer -q sset Master 5%+ unmute && pkill -RTMIN+1 i3blocks
 bindcode 122 exec amixer -q sset Master 5%- unmute && pkill -RTMIN+1 i3blocks
 bindcode 121 exec amixer -q sset Master toggle && pkill -SIGRTMIN+1 i3blocks
 
-# caps/numlock indicators for i3blocks
-bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
-bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-
-bar {
-    colors {
-        background  $dark
-        statusline  $text
-        focused_workspace   $main $dark $text
-        active_workspace    $main $dark $text
-        inactive_workspace  $dark $base $dtxt
-        urgent_workspace    $dark $visi $text
-    }
-
-    position top
-    status_command i3blocks
-}
-
 assign [class="^Vivaldi-stable$"] 1
 assign [class="^Keepassx2$"] 2
 assign [class="^Thunderbird$"] 2
@@ -203,5 +185,6 @@ exec --no-startup-id redshift || redshift -l 42.3:-83.0
 exec --no-startup-id clipit
 exec --no-startup-id compton
 exec --no-startup-id dunst
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec ~/.config/i3/restore.sh &

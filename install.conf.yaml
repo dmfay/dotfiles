@@ -21,11 +21,11 @@
     ~/.config/mutt: mutt/
     ~/.config/nvim: vim
     ~/.config/nvim/init.vim: vimrc
+    ~/.config/polybar: polybar/
     ~/.config/termite: termite/
     ~/.muttrc: muttrc
     ~/.psqlrc: psqlrc
     ~/.vim: vim
     ~/.vimrc: vimrc
-    ~/.vifm/vifmrc: vifmrc
     ~/.when/preferences: when/preferences
     ~/.zsh: zsh/
