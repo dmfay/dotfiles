@@ -16,14 +16,14 @@ set $mod Mod4
 font xft:Inconsolata-dz, FontAwesome 12
 
 for_window [class=".*"] title_format "<b>%title</b>"
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
-bindsym $mod+o border normal 1
-bindsym $mod+i border pixel 1
+bindsym $mod+o border normal 2
+bindsym $mod+i border pixel 2
 
 # define colors
 
-set $base   #16161f
+set $base   #15151e
 set $text   #efe1eb
 set $dtxt   #888888
 set $main   #552a48
@@ -32,11 +32,16 @@ set $visi   #773b65
 
 #                       border  backgr  text    indic
 client.focused          $base   $main   $text   $visi
-client.focused_inactive $base   $dark   $dtxt   $visi
+client.focused_inactive $base   $dark   $text   $dark
 client.unfocused        $base   $base   $dtxt   $visi
 client.urgent           $base   $visi   $text   $main
 client.placeholder      $base   $dark   $text   $visi
 client.background       $dark
+
+# gaps
+smart_gaps on
+smart_borders no_gaps
+gaps inner 8
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -199,6 +204,7 @@ assign [class="^Thunderbird$"] 2
 assign [class="^Pidgin$"]   2
 assign [class="^Steam$"]    3
 
+exec_always --no-startup-id hsetroot -solid "$dark"
 exec --no-startup-id redshift || redshift -l 42.3:-83.0
 exec --no-startup-id clipit
 exec --no-startup-id compton
