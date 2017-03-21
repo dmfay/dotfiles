@@ -3,8 +3,7 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/.config
-    - mkdir -p ~/.when
-    - mkdir -p ~/.vifm
+    - mkdir -p ~/.config/clipit
     - mkdir -p ~/.when
 
 - link:
@@ -14,6 +13,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.xinitrc: xinitrc
+    ~/.config/rofi: rofi/
     ~/.config/clipit: clipit/
     ~/.config/dunst: dunst/
     ~/.config/fontconfig: fontconfig/
