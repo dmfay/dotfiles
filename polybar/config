@@ -39,7 +39,7 @@ module-margin-right = 0
 font-0 = Inconsolata-dz:pixelsize=12
 font-1 = FontAwesome:size=12:weight=Regular
 
-modules-left = i3 volume xwindow
+modules-left = i3 pkg volume xwindow
 modules-center =
 modules-right = xkeyboard filesystem memory cpu temperature wlan date
 
@@ -54,6 +54,14 @@ wm-restack = i3
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
+
+[module/pkg]
+type = custom/script
+interval = 1200
+format = <label>
+label = "%output:0:30%"
+exec = .config/polybar/pkg.sh
+exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
 [module/xwindow]
 type = internal/xwindow
