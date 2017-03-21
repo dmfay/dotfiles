@@ -1,43 +1,40 @@
-[options]
-cursor_blink = system
-scrollback_lines = 10000
-
 [colors]
 
 # special
-foreground      = #efe1eb
-foreground_bold = #efe1eb
-cursor          = #773b65
-background      = #16161f
+foreground      = #f1e9ef
+foreground_bold = #f1e9ef
+cursor          = #f1e9ef
+background      = #15151e
 
 # black
 color0  = #15151e
-color8  = #8f8b9e
+color8  = #615e60
 
 # red
-color1  = #773b65
-color9  = #dc548c
+color1  = #794d68
+color9  = #b8929c
 
 # green
-color2  = #66a552
-color10 = #92e576
+color2  = #5f755a
+color10 = #85a876
 
 # yellow
-color3  = #9a8559
-color11 = #f8d48b
+color3  = #887f68
+color11 = #d0c49c
 
 # blue
-color4  = #445278
-color12 = #95b0e9
+color4  = #585e76
+color12 = #7989b4
 
 # magenta
-color5  = #9066b7
-color13 = #eea8eb
+color5  = #6e5777
+color13 = #bdaaef
 
 # cyan
-color6  = #477279
-color14 = #97d3dc
+color6  = #5a787e
+color14 = #99afb1
 
 # white
-color7  = #d2cbd0
-color15 = #efe1eb
+color7  = #ccc6c7
+color15 = #f8f8f2
+

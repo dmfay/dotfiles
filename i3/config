@@ -16,25 +16,25 @@ set $mod Mod4
 font xft:Inconsolata-dz, FontAwesome 12
 
 for_window [class=".*"] title_format "<b>%title</b>"
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
-bindsym $mod+o border normal 2
-bindsym $mod+i border pixel 2
+bindsym $mod+o border normal 0
+bindsym $mod+i border pixel 0
 
 # define colors
 
 set $base   #15151e
-set $text   #efe1eb
-set $dtxt   #888888
-set $main   #552a48
-set $dark   #271425
+set $text   #f1e9ef
+set $dtxt   #ccc6c7
+set $main   #794d68
+set $dark   #794d68
 set $visi   #773b65
 
 #                       border  backgr  text    indic
 client.focused          $base   $main   $text   $visi
-client.focused_inactive $base   $dark   $text   $dark
+client.focused_inactive $base   $dark   $text   $visi
 client.unfocused        $base   $base   $dtxt   $visi
-client.urgent           $base   $visi   $text   $main
+client.urgent           $base   $visi   $text   $visi
 client.placeholder      $base   $dark   $text   $visi
 client.background       $dark
 
@@ -169,7 +169,6 @@ mode "resize" {
 }
 
 bindsym $mod+x [urgent=latest] focus
-
 bindsym $mod+r mode "resize"
 
 # screenshot
