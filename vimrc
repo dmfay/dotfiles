@@ -194,6 +194,10 @@ nnoremap <leader>i i <Esc>r
 nnoremap <leader>A A <Esc>r
 nnoremap <leader>a a <Esc>r
 
+"lint
+nnoremap <space>n :lnext<CR>
+nnoremap <space>p :lprev<CR>
+
 " lint on write/switch
 autocmd! BufWritePost,BufEnter * Neomake
 
