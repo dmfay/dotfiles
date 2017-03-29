@@ -159,7 +159,7 @@ ramp-signal-foreground = ${colors.highlight}
 type = internal/date
 interval = 5
 
-date = "%Y-%m-%d"
+date = "%a %Y-%m-%d"
 time = %I:%M:%S %P
 
 format-prefix = 
