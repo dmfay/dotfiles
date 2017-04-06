@@ -1,3 +1,6 @@
+[options]
+scrollback_lines = 50000
+
 [colors]
 
 # special
