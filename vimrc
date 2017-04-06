@@ -75,8 +75,12 @@ let g:neomake_sh_enabled_makers = ['shellcheck']
 
 let g:vimfiler_as_default_explorer = 1
 
-" options
+" syntax settings
+
 syntax enable
+let groovy_fold='true'
+
+" options
 
 set smartindent
 set autoread
@@ -170,6 +174,7 @@ nnoremap <A-l> <C-W>l
 
 " terminal
 if has('nvim')
+  let g:terminal_scrollback_buffer_size = 10000
   tnoremap <C-[><C-[> <C-\><C-n>
 endif
 
