@@ -57,7 +57,7 @@ alias less='less -Xr'
 alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
-alias vpn='sudo openvpn --config /etc/openvpn/US_Midwest.conf'
+alias vpn='cd /etc/openvpn && sudo openvpn --config /etc/openvpn/vpn.conf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
 # the fuck
