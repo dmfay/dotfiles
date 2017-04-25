@@ -19,7 +19,7 @@ secondary = #7989b4
 width = 100%
 height = 22
 radius = 0.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -39,11 +39,11 @@ module-margin-right = 0
 font-0 = Inconsolata-dz:pixelsize=12
 font-1 = FontAwesome:size=12:weight=Regular
 
-modules-left = i3 pkg volume xwindow
-modules-center =
-modules-right = xkeyboard filesystem memory cpu temperature wlan date
+modules-left = i3 xwindow xkeyboard
+modules-center = filesystem memory cpu temperature wlan
+modules-right = pkg volume date
 
-tray-position = center
+tray-position = right
 tray-transparent = false
 ; tray-padding = 2
 ; tray-maxsize = 16
