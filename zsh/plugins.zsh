@@ -5,6 +5,7 @@ source $ZPLUG_HOME/init.zsh
 zplug "arzzen/calc.plugin.zsh"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting"
+zplug "mafredri/zsh-async"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
