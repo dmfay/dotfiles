@@ -107,6 +107,7 @@ set wildignore+=*~,*.swp,*.tmp
 set updatetime=250
 set ruler
 set mousefocus
+set mouse=a
 set foldmethod=syntax
 set foldlevelstart=20
 set clipboard=unnamedplus
