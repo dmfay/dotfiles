@@ -26,6 +26,7 @@ call dein#add('tpope/vim-commentary')
 call dein#add('tommcdo/vim-exchange')
 call dein#add('ingydotnet/yaml-vim')
 call dein#add('tfnico/vim-gradle')
+call dein#add('mzlogin/vim-markdown-toc')
 call dein#end()
 
 filetype plugin indent on
