@@ -43,6 +43,8 @@ let g:gitgutter_realtime = 1
 
 let g:delimitMate_expand_cr = 1
 
+let g:javascript_plugin_jsdoc = 1
+
 if !empty(glob('/usr/bin/python2'))
   let g:python_host_prog = '/usr/bin/python2'
 elseif !empty(glob('/usr/local/bin/python'))
