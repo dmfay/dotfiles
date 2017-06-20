@@ -154,7 +154,7 @@ nnoremap <F4> :MundoToggle<CR>
 nnoremap <C-p> :Denite -direction=topleft file_rec<CR>
 nnoremap <space>/ :Denite -direction=topleft grep<CR>
 nnoremap <space>f :Denite -direction=topleft -no-quit -mode=normal grep:.<CR>
-nnoremap <space>s :Denite -direction=topleft -quick-match buffer<CR>
+nnoremap <space>s :Denite -direction=topleft buffer<CR>
 
 " split window
 nmap <leader>swh :topleft  vnew<CR>
