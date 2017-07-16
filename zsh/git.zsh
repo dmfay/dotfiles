@@ -65,4 +65,10 @@ git_prompt_string() {
   [ -n "$git_repo" ] && echo "$(parse_git_state)$GIT_PROMPT_PREFIX%F{14}$git_repo/${git_branch#(refs/heads/|tags/)}$GIT_PROMPT_SUFFIX"
 }
 
+## Aliases
+
+# Show a formatted commit tree
 alias gtree="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+
+# Show unmodified tracked files
+alias gunm='echo -e "$(git ls-files --modified)\n$(git ls-files)" | sort | uniq -u'
