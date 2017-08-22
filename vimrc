@@ -211,8 +211,9 @@ nnoremap <space>p :lprev<CR>
 autocmd! BufWritePost,BufEnter * Neomake
 
 " syntax customizations
-au FileType groovy setlocal softtabstop=4 shiftwidth=4 expandtab
-au BufReadPost Jenkinsfile set syntax=groovy
+autocmd FileType groovy setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd BufReadPost Jenkinsfile set syntax=groovy
 
 " watch for changes
 augroup myvimrc
