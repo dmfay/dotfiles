@@ -47,6 +47,7 @@ PROMPT='%(!.%F{9}.%F{10})%n%F{reset}@%F{9}%m%F{reset}: %F{14}%~%F{reset} ${vim_m
 if [ $OS = 'linux' ]; then
   alias pacman='pacaur'
   alias ls='ls -h --color'
+  alias listening='netstat -plnt'
 else
   alias ls='ls -G'
 fi
