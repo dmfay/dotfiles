@@ -214,6 +214,7 @@ autocmd! BufWritePost,BufEnter * Neomake
 autocmd FileType groovy setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd BufReadPost Jenkinsfile set syntax=groovy
+autocmd BufReadPost .eslintrc set syntax=json
 
 " watch for changes
 augroup myvimrc
