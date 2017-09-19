@@ -40,5 +40,9 @@ surfingkeys_mark { \
 } \
 .sk_theme .focused { \
     background: #16161f; \
-}';
-
+} \
+#sk_banner { \
+    background: #552a48; \
+    border-color: #a1608e; \
+} \
+';
