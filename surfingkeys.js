@@ -1,7 +1,8 @@
 // an example to remove mapkey `Ctrl-i`
 // unmap('<Ctrl-i>');
 
-Hints.style('border: solid 3px #552a48; color:#efe1eb; background: initial; background-color: #552a48;');
+Hints.style('border: solid 3px #552a48; color:#efe1eb; background: none; background-color: #552a48;');
+Hints.style('border: solid 3px #552a48; color:#16161f; background: none; background-color: #efe1eb;', 'text');
 
 Visual.style('marks', 'background-color: #97d3dc;');
 Visual.style('cursor', 'background-color: #552a48;');
