@@ -135,6 +135,7 @@ command! J %!python -m json.tool
 " functions
 source ~/.vim/functions/whitespace.vim
 source ~/.vim/functions/kwbd.vim
+source ~/.vim/functions/unfunc.vim
 
 " mappings
 
