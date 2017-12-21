@@ -1,0 +1,19 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1042,
+       "width": 845,
+       "x": 1513,
+       "y": 30
+    },
+    "name": "Slack",
+    "percent": 1,
+    "swallows": [
+       {
+           "class": "^Slack$"
+       }
+    ],
+    "type": "con"
+}

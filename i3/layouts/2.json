@@ -1,7 +1,6 @@
-// vim:ts=4:sw=4:et
 {
-    "border": "normal",
-    "current_border_width": 2,
+    "border": "pixel",
+    "current_border_width": 0,
     "floating": "auto_off",
     "geometry": {
        "height": 1036,
@@ -9,19 +8,19 @@
        "x": 0,
        "y": 42
     },
-    "name": "passwords.kdbx - KeePassX",
-    "percent": 0.233333333333333,
+    "name": "KeePassX",
+    "percent": 0.264150943396226,
     "swallows": [
        {
-        "class": "^Keepassx2$"
+       "class": "^Keepassx2$"
        }
     ],
     "type": "con"
 }
 
 {
-    "border": "normal",
-    "current_border_width": 2,
+    "border": "pixel",
+    "current_border_width": 0,
     "floating": "auto_off",
     "geometry": {
        "height": 396,
@@ -30,30 +29,10 @@
        "y": 342
     },
     "name": "Thunderbird",
-    "percent": 0.65,
+    "percent": 0.735849056603774,
     "swallows": [
        {
-        "class": "Thunderbird"
-       }
-    ],
-    "type": "con"
-}
-
-{
-    "border": "normal",
-    "current_border_width": 2,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 1036,
-       "width": 217,
-       "x": 1699,
-       "y": 42
-    },
-    "name": "Buddy List",
-    "percent": 0.116666666666667,
-    "swallows": [
-       {
-        "class": "^Pidgin$"
+       "class": "^Thunderbird$"
        }
     ],
     "type": "con"

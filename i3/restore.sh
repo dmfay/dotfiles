@@ -1,11 +1,11 @@
 #!/bin/sh
 
-for layout in $(ls ~/.config/i3/layouts/*.json); do
-  i3-msg "workspace $(basename $layout .json); append_layout $layout"
+for layout in ~/.config/i3/layouts/*; do
+  i3-msg "workspace $(basename "$layout" .json); append_layout $layout"
 done
 
 (vivaldi-stable &)
 (keepassx2 &)
 (thunderbird &)
-(pidgin &)
 (steam &)
+(slack &)
