@@ -39,10 +39,16 @@ if [[ -d $HOME/.zsh/$OS ]]; then
   done
 fi
 
-# Set the right-hand prompt
+# set the right-hand prompt
 RPS1='$(git_prompt_string)'
 
-PROMPT='%(!.%F{9}.%F{10})%n%F{reset}@%F{9}%m%F{reset}: %F{14}%~%F{reset} ${vim_mode} %F{reset}'
+# main prompt
+USER='%(!.%F{9}.%F{10})%n%F{reset}'
+SYS='%F{9}%m%F{reset}'
+STATUS='%(?.%F{15}.%F{1})@%F{reset}'
+DIR='%F{14}%~%F{reset}'
+
+PROMPT='$USER$STATUS$SYS $DIR ${vim_mode} %F{reset}'
 
 if [ $OS = 'linux' ]; then
   alias pacman='pacaur'
