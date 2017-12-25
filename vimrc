@@ -85,7 +85,6 @@ let groovy_fold='true'
 
 " options
 
-set smartindent
 set autoread
 set background=dark
 set backspace=2
