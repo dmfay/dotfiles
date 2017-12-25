@@ -43,12 +43,12 @@ fi
 RPS1='$(git_prompt_string)'
 
 # main prompt
-USER='%(!.%F{9}.%F{10})%n%F{reset}'
+CURUSER='%(!.%F{9}.%F{10})%n%F{reset}'
 SYS='%F{9}%m%F{reset}'
 STATUS='%(?.%F{15}.%F{1})@%F{reset}'
 DIR='%F{14}%~%F{reset}'
 
-PROMPT='$USER$STATUS$SYS $DIR ${vim_mode} %F{reset}'
+PROMPT='$CURUSER$STATUS$SYS $DIR ${vim_mode} %F{reset}'
 
 if [ $OS = 'linux' ]; then
   alias pacman='pacaur'
