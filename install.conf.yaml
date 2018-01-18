@@ -6,8 +6,6 @@
     - mkdir -p ~/.when
 
 - link:
-    ~/.i3blocks: i3blocks/blocks/
-    ~/.i3blocks.conf: i3blocks.conf
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
