@@ -10,6 +10,7 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.xinitrc: xinitrc
+    ~/.xmodmap: xmodmap
     ~/.config/rofi: rofi/
     ~/.config/clipit: clipit/
     ~/.config/cmus/caput-mortuum.theme: cmus/caput-mortuum.theme
