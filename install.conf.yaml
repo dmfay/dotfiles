@@ -14,6 +14,7 @@
     ~/.xinitrc: xinitrc
     ~/.config/rofi: rofi/
     ~/.config/clipit: clipit/
+    ~/.config/cmus/caput-mortuum.theme: cmus/caput-mortuum.theme
     ~/.config/dunst: dunst/
     ~/.config/fontconfig: fontconfig/
     ~/.config/i3: i3/
