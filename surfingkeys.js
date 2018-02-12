@@ -37,12 +37,15 @@ surfingkeys_mark { \
     color: #555; \
 } \
 .sk_theme .annotation { \
-    color: #555; \
+    background: #16161f; \
+    color: #efe1eb; \
 } \
 .sk_theme .focused { \
     background: #16161f; \
+    color: #efe1eb; \
 } \
 #sk_banner { \
+    color: #efe1eb; \
     background: #552a48; \
     border-color: #a1608e; \
 } \
