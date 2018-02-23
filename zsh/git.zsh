@@ -72,3 +72,6 @@ alias gtree="git log --graph --abbrev-commit --decorate --date=relative --format
 
 # Show unmodified tracked files
 alias gunm='echo -e "$(git ls-files --modified)\n$(git ls-files)" | sort | uniq -u'
+
+# Nuke files from repo history
+alias gnuke='sh ~/.dotfiles/scripts/git-nuke.sh'
