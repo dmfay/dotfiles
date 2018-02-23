@@ -9,24 +9,31 @@ set runtimepath^=~/.vim/dein.vim
 call dein#begin(expand('~/.vim/plugins'))
 call dein#add('Shougo/dein.vim')
 call dein#add('Raimondi/delimitMate')
-call dein#add('tpope/vim-surround')
-call dein#add('simnalamburt/vim-mundo')
-call dein#add('pangloss/vim-javascript')
-call dein#add('digitaltoad/vim-pug')
-call dein#add('airblade/vim-gitgutter')
-call dein#add('terryma/vim-multiple-cursors')
-call dein#add('ap/vim-css-color')
-call dein#add('tpope/vim-unimpaired')
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 call dein#add('Shougo/denite.nvim')
 call dein#add('Shougo/vimfiler.vim')
-call dein#add('neomake/neomake')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+call dein#add('airblade/vim-gitgutter')
+call dein#add('ap/vim-css-color')
 call dein#add('editorconfig/editorconfig-vim')
-call dein#add('tpope/vim-commentary')
-call dein#add('tommcdo/vim-exchange')
-call dein#add('ingydotnet/yaml-vim')
-call dein#add('tfnico/vim-gradle')
 call dein#add('mzlogin/vim-markdown-toc')
+call dein#add('neomake/neomake')
+call dein#add('simnalamburt/vim-mundo')
+call dein#add('terryma/vim-multiple-cursors')
+call dein#add('tfnico/vim-gradle')
+call dein#add('tommcdo/vim-exchange')
+call dein#add('tomtom/tcomment_vim')
+call dein#add('tpope/vim-commentary')
+call dein#add('tpope/vim-repeat')
+call dein#add('tpope/vim-surround')
+call dein#add('tpope/vim-unimpaired')
+
+" syntax
+call dein#add('derekwyatt/vim-scala')
+call dein#add('digitaltoad/vim-pug')
+call dein#add('groenewege/vim-less')
+call dein#add('ingydotnet/yaml-vim')
+call dein#add('mxw/vim-jsx')
+call dein#add('pangloss/vim-javascript')
 call dein#end()
 
 filetype plugin indent on
@@ -37,7 +44,7 @@ endif
 
 " plugin config
 
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 let g:gitgutter_max_signs = 500
 let g:gitgutter_realtime = 1
 
@@ -85,37 +92,49 @@ let groovy_fold='true'
 
 " options
 
-set autoread
-set background=dark
-set backspace=2
+" general workspace
+set clipboard=unnamedplus
 set cursorline
-set foldcolumn=1
-set ignorecase
-set lazyredraw
+set background=dark
 set number
-set smartcase
+set scrolloff=3             " start scrolling 3 lines before border
+set updatetime=250
+set backspace=2
+set lazyredraw              " update after finishing macro execution etc
+set ruler
+
+" buffer management
+set autoread        " reload changed files from disk
+set hidden          " track hidden buffers
+set ttimeoutlen=100 " for alt-hjkl buffer switching: https://github.com/neovim/neovim/issues/5792
+
+" tab stuff
 set expandtab
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set smarttab
-set hidden
+
+" menus
 set wildmenu
 set wildmode=longest,list
 set wildignore+=*.a,*.o
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
 set wildignore+=.DS_Store,.git,.hg,.svn
 set wildignore+=*~,*.swp,*.tmp
-set updatetime=250
-set ruler
-set mousefocus
-set mouse=a
+
+" folding
+set foldcolumn=1
 set foldmethod=syntax
 set foldlevelstart=20
-set clipboard=unnamedplus
-" for alt-hjkl buffer switching
-" https://github.com/neovim/neovim/issues/5792
-set ttimeoutlen=100
+
+" searching
+set ignorecase
+set smartcase
+
+" mouse
+set mousefocus
+set mouse=a
 
 if has('nvim')
   set termguicolors
