@@ -51,7 +51,7 @@ DIR='%F{14}%~%F{reset}'
 PROMPT='$CURUSER$STATUS$SYS $DIR ${vim_mode} %F{reset}'
 
 if [ $OS = 'linux' ]; then
-  alias pacman='pacaur'
+  alias pacman='pikaur'
   alias ls='ls -h --color'
   alias listening='netstat -plnt'
 else
