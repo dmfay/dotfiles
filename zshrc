@@ -61,6 +61,7 @@ fi
 alias sudo='sudo '
 alias grep='grep --color'
 alias less='less -Xr'
+alias locate='locate -i'
 alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
