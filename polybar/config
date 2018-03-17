@@ -42,7 +42,7 @@ font-2 = DejaVuSans:style=Book:pixelsize=10
 ; font-2 = NotoEmoji-Regular:pixelsize=7
 
 modules-left = i3 xwindow xkeyboard
-modules-center = filesystem memory cpu temperature wlan
+modules-center = filesystem memory cpu temperature network
 modules-right = pkg volume date
 
 tray-position = right
@@ -137,25 +137,30 @@ format-prefix = " "
 format-prefix-foreground = ${colors.highlight}
 label = %gb_free%
 
-[module/wlan]
+; [module/wlan]
+; type = internal/network
+; interface = wlp8s0
+; interval = 1.0
+; format-connected = <ramp-signal> <label-connected>
+; label-connected = %{F#15151e}%local_ip% %{F#f1e9ef}%downspeed:9% %upspeed:9%
+
+; format-disconnected = <label-disconnected>
+; label-disconnected = %ifname% disconnected
+; label-disconnected-foreground = ${colors.highlight}
+
+; ramp-signal-0 = 😱
+; ramp-signal-1 = 😠
+; ramp-signal-2 = 😒
+; ramp-signal-3 = 😊
+; ramp-signal-4 = 😃
+; ramp-signal-5 = 😈
+; ramp-signal-foreground = ${colors.highlight}
+
+[module/network]
 type = internal/network
-interface = wlp8s0
+interface = enp0s25
 interval = 1.0
-
-format-connected = <ramp-signal> <label-connected>
 label-connected = %{F#15151e}%local_ip% %{F#f1e9ef}%downspeed:9% %upspeed:9%
-
-format-disconnected = <label-disconnected>
-label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.highlight}
-
-ramp-signal-0 = 😱
-ramp-signal-1 = 😠
-ramp-signal-2 = 😒
-ramp-signal-3 = 😊
-ramp-signal-4 = 😃
-ramp-signal-5 = 😈
-ramp-signal-foreground = ${colors.highlight}
 
 [module/date]
 type = internal/date
