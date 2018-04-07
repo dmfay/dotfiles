@@ -70,6 +70,9 @@ else
       \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
 
+" allow grep source filtering on either path or text
+call denite#custom#source('grep', 'converters', ['converter_abbr_word'])
+
 call denite#custom#map('insert', '<C-h>', '<denite:move_to_first_line>', 'noremap')
 call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
