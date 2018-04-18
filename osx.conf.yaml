@@ -6,8 +6,8 @@
     - mkdir -p ~/.kwm
 
 - link:
-    ~/.kwm/kwmrc: kwm/kwmrc
-    ~/.khdrc: kwm/khdrc
+    ~/.chunkwmrc: chunkwmrc
+    ~/.skhdrc: skhdrc
     ~/.zshenv: zshenv
     ~/.zshrc: zshrc
     ~/.config/nvim: vim
