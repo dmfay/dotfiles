@@ -190,7 +190,7 @@ assign [class="^Steam$"]    3
 
 exec_always --no-startup-id hsetroot -solid "$main"
 exec --no-startup-id redshift || redshift -l 42.3:-83.0
-exec --no-startup-id clipit
+exec --no-startup-id copyq
 exec --no-startup-id compton
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
