@@ -66,7 +66,7 @@ alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
 alias tree='tree -C'
-alias trii="(cat .gitignore & echo '.git') | sed 's/^\(.\+\)$/\1\|/' | tr -d '\n' | xargs printf \"-I '%s'\" | xargs tree -C"
+alias trii='tree -C -I $(git check-ignore * 2>/dev/null | tr "\n" "|").git'
 alias vpn='cd /etc/openvpn && sudo openvpn --config /etc/openvpn/vpn.conf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 
