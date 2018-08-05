@@ -21,6 +21,7 @@
     ~/.config/nvim/init.vim: vimrc
     ~/.config/polybar: polybar/
     ~/.config/termite: termite/
+    ~/.config/compton.conf: compton.conf
     ~/.muttrc: muttrc
     ~/.psqlrc: psqlrc
     ~/.vim: vim
