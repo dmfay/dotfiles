@@ -25,7 +25,7 @@ compinit
 colors
 
 # vars
-export PATH=$PATH:$HOME/.gem/ruby/2.4.0/bin
+export PATH=$PATH:$HOME/.gem/ruby/2.5.0/bin
 
 # sources
 for f in $HOME/.zsh/*.zsh; do
@@ -65,6 +65,8 @@ alias locate='locate -i'
 alias rm='rm -v'
 alias vi='nvim'
 alias vim='nvim'
+alias tree='tree -C'
+alias trii='tree -C -I $(git check-ignore * 2>/dev/null | tr "\n" "|").git'
 alias vpn='cd /etc/openvpn && sudo openvpn --config /etc/openvpn/vpn.conf'
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
 

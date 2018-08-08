@@ -5,7 +5,7 @@ for layout in ~/.config/i3/layouts/*; do
 done
 
 (vivaldi-stable &)
-(keepassx2 &)
+(keepassxc &)
 (thunderbird &)
 (steam &)
 (slack &)

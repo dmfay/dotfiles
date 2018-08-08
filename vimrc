@@ -67,7 +67,7 @@ if executable('rg')
   call denite#custom#var('grep', 'default_opts', ['--vimgrep', '--no-heading', '--ignore-case'])
 else
   call denite#custom#var('file_rec', 'command',
-      \ ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+      \ ['grep', '--follow', '--nocolor', '--nogroup', '-g', ''])
 endif
 
 " allow grep source filtering on either path or text

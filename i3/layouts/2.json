@@ -8,11 +8,11 @@
        "x": 0,
        "y": 42
     },
-    "name": "KeePassX",
+    "name": "KeePassXC",
     "percent": 0.264150943396226,
     "swallows": [
        {
-       "class": "^Keepassx2$"
+       "class": "^keepassxc$"
        }
     ],
     "type": "con"
