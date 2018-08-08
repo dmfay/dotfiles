@@ -1,0 +1,1 @@
+alias getARNs="jq -r '.Reservations[] | .OwnerId as \$OwnerId | ( .Instances[] | { \"ARN\": \"arn:aws:ec2:\(.Placement.AvailabilityZone[:-1]):\(\$OwnerId):instance/\(.InstanceId)\", \"AvailabilityZone\": \"\(.Placement.AvailabilityZone)\", InstanceId, PublicDnsName, PrivateDnsName, Tags} )' | jq -s ."
