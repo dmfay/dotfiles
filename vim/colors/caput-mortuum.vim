@@ -1,6 +1,29 @@
 "hi clear
 syntax reset
 let g:colors_name = "caput-mortuum"
+let g:terminal_color_0='#15151e'
+let g:terminal_color_8='#615e60'
+" red
+let g:terminal_color_1='#794d68'
+let g:terminal_color_9='#b8929c'
+" green
+let g:terminal_color_2='#5f755a'
+let g:terminal_color_10='#85a876'
+" yellow
+let g:terminal_color_3='#887f68'
+let g:terminal_color_11='#d0c49c'
+" blue
+let g:terminal_color_4='#585e76'
+let g:terminal_color_12='#7989b4'
+" magenta
+let g:terminal_color_5='#6e5777'
+let g:terminal_color_13='#bdaaef'
+" cyan
+let g:terminal_color_6='#5a787e'
+let g:terminal_color_14='#99afb1'
+" white
+let g:terminal_color_7='#ccc6c7'
+let g:terminal_color_15='#f8f8f2'
 hi Boolean gui=NONE guifg=#e5aaee guibg=NONE
 hi ColorColumn gui=NONE guifg=NONE guibg=#1e1e2a
 hi Comment gui=NONE guifg=#99afb1 guibg=NONE
