@@ -91,20 +91,27 @@ let g:vimfiler_as_default_explorer = 1
 " syntax settings
 
 syntax enable
+set synmaxcol=255
 let groovy_fold='true'
 
 " options
 
 " general workspace
+set title
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set clipboard=unnamedplus
 set cursorline
 set background=dark
 set number
 set scrolloff=3             " start scrolling 3 lines before border
+set scrollopt=ver,hor,jump  " tie scrollbound splits together
 set updatetime=250
 set backspace=2
 set lazyredraw              " update after finishing macro execution etc
 set ruler
+set linebreak               " better line breaks
+set showbreak=❧
+set showcmd
 
 " buffer management
 set autoread        " reload changed files from disk
