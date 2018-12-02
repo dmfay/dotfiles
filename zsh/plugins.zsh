@@ -1,4 +1,4 @@
-[[ -n $ZPLUG_HOME ]] || return
+[[ -n $ZPLUG_HOME && -d $ZPLUG_HOME ]] || return
 
 source $ZPLUG_HOME/init.zsh
 
