@@ -1,9 +1,0 @@
-**/*.swp
-**/*.swo
-**/*.netrwhist
-
-vim/plugins
-vim/init.vim
-vim/.init.vim-*
-
-dotbot/*

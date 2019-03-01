@@ -1,6 +1,0 @@
-[Unit]
-Description=Back up installed packages list
-
-[Service]
-Type=simple
-ExecStart=/bin/sh -c '/usr/bin/pacman -Qqe > /etc/packages.txt'

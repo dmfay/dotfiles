@@ -1,6 +1,0 @@
-[Unit]
-Description=Back up files/directories configured in /etc/snebu-client.conf
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/snebu-client backup -v

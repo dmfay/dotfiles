@@ -1,9 +1,0 @@
-[Unit]
-Description=Check for updates
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/pacman -Sy
-
-[Install]
-WantedBy=multi-user.target
